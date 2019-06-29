@@ -128,5 +128,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "react-styleguidist": "^9.1.11"
   }
 }
