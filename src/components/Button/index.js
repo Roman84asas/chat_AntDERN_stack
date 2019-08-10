@@ -5,7 +5,7 @@ import './Buton.scss';
 
 const Button = ({children}) => {
     return (
-        <BasicButton>{children}</BasicButton>
+        <BasicButton type="large">{children}</BasicButton>
     )
 }
 
