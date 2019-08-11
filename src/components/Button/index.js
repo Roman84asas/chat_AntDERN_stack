@@ -1,12 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Button as BasicButton } from 'antd';
 
 import './Buton.scss';
 
-const Button = ({children}) => {
+const Button = props => {
     return (
-        <BasicButton type="large">{children}</BasicButton>
+        <BasicButton className="button" type="large" {...props}/>
     )
-}
+};
+
+Button.propTypes = {
+  className: PropTypes.string
+};
 
 export default Button;
