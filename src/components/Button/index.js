@@ -7,7 +7,7 @@ import './Buton.scss';
 
 const Button = props => {
     return (
-        <BasicButton className="button" type="large" {...props}/>
+        <BasicButton className="button" type="dashed" {...props}/>
     )
 };
 
