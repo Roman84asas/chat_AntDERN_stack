@@ -2,9 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+
+  &__title {
+    text-align: center;
+    h2 {
+      font-size: 30px;
+      line-height: 28px;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    p   {
+      font-size: 18px;
+      line-height: 10px;
+      letter-spacing: 1px;
+      color: gray;
+      margin-bottom: 50px;
+    }
+}
 
   .input_block {
-    max-width: 450px;
-    width: 100%;
+    width: 450px;
   }
 }
