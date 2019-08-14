@@ -56,6 +56,7 @@ class Auth extends React.Component {
                                 Войти
                             </Button>
                         </Form.Item>
+                        <a className="auth__register-link" href="#">Зарегестрироваться</a>
                     </Form>
                 </div>
             </section>

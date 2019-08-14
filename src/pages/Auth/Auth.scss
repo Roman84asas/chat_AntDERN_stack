@@ -27,8 +27,20 @@
       margin-bottom: 50px;
     }
   }
-
-
+  .login-form-button {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+  }
+  &__register-link {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0.1px;
+    color: #ADADAD;
+  }
 
 
   .input_block {
