@@ -52,7 +52,7 @@ class Auth extends React.Component {
                                 initialValue: true,
                             })(<Checkbox>Remember me</Checkbox>)}
 
-                            <Button type="primary" htmlType="submit" className="login-form-button" block>
+                            <Button type="primary" htmlType="submit" size="large" className="login-form-button" block>
                                 Войти
                             </Button>
                         </Form.Item>
