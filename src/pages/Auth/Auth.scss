@@ -4,12 +4,7 @@
   align-items: center;
   height: 100%;
 
-  &__cont {
-    padding: 45px;
-    background: #f6faff;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4204);
-    border-radius: 2px;
-  }
+
   &__title {
     text-align: center;
     h2 {
@@ -41,8 +36,6 @@
     letter-spacing: 0.1px;
     color: #ADADAD;
   }
-
-
   .input_block {
     width: 450px;
   }
