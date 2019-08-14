@@ -5,7 +5,7 @@ function App() {
   return (
       <div className="wrapper">
           <h1>Hello</h1>
-          <Button className="roman">Button</Button>
+          <Button type="primary" size="large" >Button</Button>
       </div>
   );
 }

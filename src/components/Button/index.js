@@ -7,7 +7,9 @@ import './Buton.scss';
 
 const Button = props => {
     return (
-        <BasicButton {...props} className={className("button", props.className)}/>
+        <BasicButton {...props} className={className("button", props.className, {
+            "button--large": props.size === "large"
+        })}/>
     )
 };
 
