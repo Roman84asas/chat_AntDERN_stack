@@ -8,5 +8,5 @@ import './styles/style.scss';
 
 ReactDOM.render(<Router>
     <App />
-    </Router>, document.getElementById('root'));
+</Router>, document.getElementById('root'));
 

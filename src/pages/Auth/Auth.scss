@@ -10,14 +10,36 @@
     h2 {
       font-size: 30px;
       line-height: 28px;
-      letter-spacing: 1px;
+      letter-spacing: 0.1px;
       margin-bottom: 15px;
     }
 
     p {
       font-size: 18px;
       line-height: 10px;
-      letter-spacing: 1px;
+      color: gray;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__success-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+    h2 {
+      font-size: 25px;
+      line-height: 28px;
+      letter-spacing: 0.1px;
+      margin-bottom: 20px;
+      margin-top: 35px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 18px;
       color: gray;
       margin-bottom: 50px;
     }

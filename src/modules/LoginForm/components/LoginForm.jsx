@@ -31,7 +31,6 @@ class LoginForm extends Component {
                     </Form.Item>
                     <Form.Item>
                         <Checkbox>Сохранить данные</Checkbox>
-
                         <Button type="primary" htmlType="submit" size="large" className="login-form-button" block>
                             Войти
                         </Button>
