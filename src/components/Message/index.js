@@ -6,7 +6,7 @@ import './Message.scss';
 const Message = ({avatar, user, text, date}) => (
     <div className="message">
         <div className="message__avatar">
-            <img src={avatar} alt={ `User ${user.fullname}` }/>
+            <img src={avatar} alt={ `User ${user.fullname}` } className="message__img"/>
         </div>
         <div className="message__content">
             <div className="message__bubble">
