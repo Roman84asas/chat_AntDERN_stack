@@ -1,9 +1,9 @@
 import React from 'react';
 
-
+import {Message} from "../../components";
 
 import  './Home.scss';
-import {Message} from "../../components";
+
 
 
 const Home = () => {
