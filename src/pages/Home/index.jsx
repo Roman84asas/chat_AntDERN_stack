@@ -14,6 +14,12 @@ const Home = () => {
                 text="Шалом друг) Как в Ашдоде??  "
                 date="Fri Aug 16 2019 18:56:50"
             />
+            <Message
+                avatar="https://sun9-18.userapi.com/c841324/v841324414/1e78f/PnTHbtdm08c.jpg?ava=1"
+                text="Шалом) Все отлично, а у тебя?"
+                date="Fri Aug 16 2019 18:56:50"
+                isMe={true}
+            />
         </section>
     );
 };
