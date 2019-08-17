@@ -19,6 +19,7 @@ const Home = () => {
                 text="Шалом) Все отлично, а у тебя?"
                 date="Fri Aug 16 2019 18:56:50"
                 isMe={true}
+                isReaded={true}
             />
         </section>
     );

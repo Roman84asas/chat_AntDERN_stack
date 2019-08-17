@@ -8,15 +8,19 @@ import  ruLocale from 'date-fns/locale/ru';
 import './Message.scss';
 
 const Message = ({avatar, user, text, date, isMe}) => (
-    <div className={className("message", {'message--isMe': isMe})}>
-        <div className="message__avatar">
-            <img src={avatar} alt={ `User ${user.fullname}` } className="message__img"/>
-        </div>
+    <div className={className("message", { 'message--isme': isMe })}>
         <div className="message__content">
-            <div className="message__bubble">
-                <p className="message__text">{text}</p>
+            <div className="message__avatar">
+                <img src={avatar} alt={ `Avatar ${user.fullname}` } className="message__img"/>
             </div>
-            <span className="message__date">{distanceInWordsToNow(date, {addSuffix: true, locale: ruLocale})}</span>
+            <div className="message__info">
+                <div className="message__bubble">
+                    <p className="message__text">{text}</p>
+                </div>
+                <span className="message__date">
+                    {distanceInWordsToNow(date, {addSuffix: true, locale: ruLocale})}
+                </span>
+            </div>
         </div>
     </div>
 );
@@ -29,6 +33,6 @@ Message.propTypes = {
     avatar: PropTypes.string,
     text: PropTypes.string,
     date: PropTypes.string,
-    user: PropTypes.object
+    user: PropTypes.object,
 };
 export default Message;

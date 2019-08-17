@@ -13,7 +13,7 @@ class RegisterForm extends Component {
                     <p>Для входа в чат, Вам необходимо зарегистрироваться</p>
                 </div>
                 <InputBlock>
-                    {!success ? (
+                    {success ? (
                         <Form onSubmit={this.handleSubmit} className="login-form">
                             <Form.Item hasFeedback validateStatus="success">
                                 <Input

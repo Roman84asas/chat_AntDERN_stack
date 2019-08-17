@@ -1,10 +1,15 @@
 @import "~styles/variables";
 
 .message {
-  display: flex;
-  max-width: 440px;
-  margin-bottom: 20px;
+  $self: &;
 
+  &__content {
+    display: flex;
+    max-width: 440px;
+    margin-bottom: 20px;
+    position: relative;
+
+  }
   &__avatar {
     padding-bottom: 26px;
     display: flex;
@@ -31,12 +36,43 @@
       margin-bottom: 0px;
       font-size: 14px;
       line-height: 20px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    }
+      }
   }
   
   &__date {
     font-size: 12px;
     opacity: 0.4;
+  }
+
+  &--isme {
+    display: flex;
+    flex-direction: row-reverse;
+
+    #{$self}__content {
+      margin-bottom: 15px;
+      flex-direction: row-reverse;
+    }
+
+    #{$self}__avatar {
+      img {
+        margin-right: 0;
+        margin-left: 13px;
+      }
+    }
+
+    #{$self}__info {
+    text-align: right;
+    }
+
+    #{$self}__dubble {
+      background: #ffffff;
+      border: 1px solid #ececec;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.220444);
+      border-radius: 12px 12px 0px 12px;
+
+      #{$self}__text {
+        color: $black;
+      }
+    }
   }
 }
