@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b0dfa6c-5a0f-4c45-998d-c5b0cba8cf1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/read.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Message/Message.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Message/Message.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Message/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/RegisterForm/components/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/RegisterForm/components/RegisterForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/RegisterForm/containers/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/RegisterForm/containers/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/index.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -105,9 +96,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="88" />
-          <entry key="JSX Harmony" value="1656" />
-          <entry key="JavaScript" value="1835" />
-          <entry key="PLAIN_TEXT" value="91" />
+          <entry key="JSX Harmony" value="1717" />
+          <entry key="JavaScript" value="2022" />
+          <entry key="PLAIN_TEXT" value="97" />
           <entry key="SCSS" value="1404" />
         </counts>
       </usages-collector>
@@ -142,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modules/RegisterForm/containers/RegisterForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -154,8 +145,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/modules/RegisterForm/components/RegisterForm.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+            <state relative-caret-position="375">
+              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -285,19 +279,6 @@
               <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Message" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -328,26 +309,6 @@
               <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -430,7 +391,7 @@
       <workItem from="1566038136610" duration="668000" />
       <workItem from="1566052577242" duration="3973000" />
       <workItem from="1566058791024" duration="12905000" />
-      <workItem from="1566073892980" duration="2588000" />
+      <workItem from="1566073892980" duration="5496000" />
     </task>
     <task id="LOCAL-00001" summary="New proj">
       <created>1561827632325</created>
@@ -614,17 +575,24 @@
       <option name="project" value="LOCAL" />
       <updated>1566063390442</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add Formik">
+      <created>1566076595249</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1566076595249</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113605000" />
+    <option name="totallyTimeSpent" value="116513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23867229" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23867229" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -639,7 +607,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="RNConsole" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3391116" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3391116" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -681,7 +649,8 @@
     <MESSAGE value="Work to Auth" />
     <MESSAGE value="Add Register and Login" />
     <MESSAGE value="Add Home page and Message components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Home page and Message components" />
+    <MESSAGE value="Add Formik" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Formik" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/logo.svg" />
@@ -879,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/RegisterForm/containers/RegisterForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
@@ -889,8 +858,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/RegisterForm/components/RegisterForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+        <state relative-caret-position="375">
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

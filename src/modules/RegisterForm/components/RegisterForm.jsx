@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Checkbox, Form, Icon, Input} from "antd";
 import {Button, InputBlock} from "../../../components";
 import {Link} from "react-router-dom";
@@ -46,27 +46,31 @@ const RegisterForm = props => {
                                     hasFeedback
                                 />
                             </Form.Item>
-                            <Form.Item hasFeedback validateStatus="success">
+                            <Form.Item validateStatus={
+                                !touched.password ? ' ' : errors.password ? "error" : "success"}
+                                hasFeedback>
                                 <Input
+                                    id="password"
                                     size="large"
                                     prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}}/>}
                                     type="password"
                                     placeholder="Пароль"
-                                    hasFeedback
+                                    value={values.password}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
                                 />
                             </Form.Item>
-                            <Form.Item hasFeedback validateStatus="success">
+                            <Form.Item validateStatus="success"
+                                 hasFeedback>
                                 <Input
                                     size="large"
                                     prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}}/>}
-                                    type="password"
                                     placeholder="Повторите пароль"
-                                    hasFeedback
                                 />
                             </Form.Item>
                             <Form.Item>
                                 <Checkbox>Сохранить данные</Checkbox>
-                                <Button type="primary" htmlType="submit" size="large" className="login-form-button" block>
+                                <Button onClick={handleSubmit} type="primary" htmlType="submit" size="large" className="login-form-button" block>
                                     Зарегистрироваться
                                 </Button>
                             </Form.Item>
