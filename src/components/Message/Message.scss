@@ -10,38 +10,56 @@
     position: relative;
 
   }
+  &__icon-read {
+    position: absolute;
+    bottom: 25px;
+    left: -25px;
+  }
+
   &__avatar {
-    padding-bottom: 26px;
     display: flex;
     flex-direction: column-reverse;
-  }
-  &__img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-    margin-right: 15px;
-    margin-bottom: 0;
-    padding-bottom: 0px;
+    img {
+      border-radius: 50px;
+      width: 33px;
+      height: 33px;
+      margin-right: 13px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 31px;
+    }
   }
 
   &__bubble {
     background: $blue_message;
     box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.196733);
     border-radius: 12px 12px 12px 0px;
-    padding: 15px 10px 5px 10px;
-    margin-bottom: 10px;
-
-    p {
-      color: #ffff;
-      margin-bottom: 0px;
-      font-size: 14px;
-      line-height: 20px;
-      }
+    padding: 15px;
+    margin-bottom: 8px;
   }
-  
+
   &__date {
     font-size: 12px;
-    opacity: 0.4;
+    opacity: 0.5;
+  }
+
+  &__text {
+    color: #fff;
+    line-height: 20px;
+  }
+
+  &__attachments {
+    display: flex;
+    margin-bottom: 5px;
+    &-item {
+      margin-right: 5px;
+      cursor: pointer;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+      }
+    }
   }
 
   &--isme {
