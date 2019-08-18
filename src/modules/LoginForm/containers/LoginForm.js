@@ -1,6 +1,6 @@
 import { withFormik } from "formik";
 import LoginForm from "../components/LoginForm";
-import validateForm from "utils/validate";
+import validateForm from "../../../utils/helpers/validate";
 
 export default withFormik({
     enableReinitialize: true,

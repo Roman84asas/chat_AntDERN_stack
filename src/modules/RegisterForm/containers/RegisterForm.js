@@ -1,6 +1,6 @@
 import RegisterForm from '../components/RegisterForm';
 import { withFormik } from 'formik';
-import validateForm from "utils/validate";
+import validateForm from "../../../utils/helpers/validate";
 
 export default withFormik({
     enableReinitialize: true,

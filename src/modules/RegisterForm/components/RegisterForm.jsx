@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Icon, Input} from "antd";
 import {Button, InputBlock} from "../../../components";
-import { validateField } from "utils/helpers";
+import { validateField } from "../../../utils/helpers";
 import {Link} from "react-router-dom";
 
 
@@ -20,7 +20,7 @@ const RegisterForm = props => {
     } = props;
     return (
         <div>
-            <div className="auth__title">
+            <div className="auth__top">
                 <h2> Регистрация</h2>
                 <p>Для входа в чат, Вам необходимо зарегистрироваться</p>
             </div>

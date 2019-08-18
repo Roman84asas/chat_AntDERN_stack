@@ -1,28 +1,30 @@
 import React from 'react';
-import { Message, DialogItem } from "components";
+import { DialogItem } from "../../components";
 
 import  './Home.scss';
 
 const Home = () => (
         <section className="home">
+
+
             <div className="dialogs">
                 <DialogItem
                     user={{
-                        fullname: "Федор Достоевский",
+                        fullname: "Роман В",
                         isOnline: false
                     }}
                     unreaded={999}
                 />
                 <DialogItem
                     user={{
-                        fullname: "Федор Достоевский",
+                        fullname: "Роман В",
                         isOnline: true
                     }}
                     unreaded={0}
                 />
                 <DialogItem
                     user={{
-                        fullname: "Федор Достоевский",
+                        fullname: "Роман В",
                         isOnline: false
                     }}
                     unreaded={0}
@@ -80,7 +82,7 @@ const Home = () => (
               ]}
             />
             <Message
-              avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+              avatar="https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1"
               isTyping
             /> */}
         </section>

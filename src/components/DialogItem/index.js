@@ -9,7 +9,7 @@ const getAvatar = avatar => {
     if (avatar) {
         return (
             <img
-                src="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                src="https://sun1-89.userapi.com/c847216/v847216083/1d367d/9TGvLbZGnSg.jpg?ava=1"
                 alt=""
             />
         );
@@ -27,12 +27,12 @@ const DialogItem = ({ user, message, unreaded }) => (
         <div className="dialogs__item-avatar">
             {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
             {getAvatar(
-                "https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                "https://sun1-89.userapi.com/c847216/v847216083/1d367d/9TGvLbZGnSg.jpg?ava=1"
             )}
         </div>
         <div className="dialogs__item-info">
             <div className="dialogs__item-info-top">
-                <b>Фёдор Достоевский</b>
+                <b>Роман В</b>
                 <span>
           {/* <Time date={new Date()} /> */}
                     13:03
@@ -40,8 +40,8 @@ const DialogItem = ({ user, message, unreaded }) => (
             </div>
             <div className="dialogs__item-info-bottom">
                 <p>
-                    Мы все свидетельствуем Вам глубочайшее наше почтение и целуем Ваши
-                    ручки, дражайший папенька: Михайла, Федор, Варвара и Андрюша
+                    Шалом мой дорогой друг, как Вы отпраздновали Шабат??
+                    Б-г в помощь Вам на этой неделе
                 </p>
                 <IconReaded isMe={true} isReaded={false} />
                 {unreaded > 0 && (
