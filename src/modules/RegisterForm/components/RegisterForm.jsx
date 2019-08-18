@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Icon, Input} from "antd";
 import {Button, InputBlock} from "../../../components";
+import { validateField } from "utils/helpers";
 import {Link} from "react-router-dom";
 
 
@@ -26,10 +27,10 @@ const RegisterForm = props => {
             <InputBlock>
                 {!success ? (
                         <Form onSubmit={handleSubmit} className="login-form">
-                            <Form.Item validateStatus={
-                                !touched.email ? "" : errors.email ? "error" : "success"}
-                                 help={!touched.email ? "" : errors.email}
-                                hasFeedback>
+                            <Form.Item validateStatus={validateField("email", touched, errors)}
+                                       help={!touched.email ? "" : errors.email}
+                                       hasFeedback
+                            >
                                 <Input
                                     id="email"
                                     size="large"
@@ -49,10 +50,10 @@ const RegisterForm = props => {
                                     hasFeedback
                                 />
                             </Form.Item>
-                            <Form.Item validateStatus={
-                                !touched.password ? "" : errors.password ? "error" : "success"}
-                                 help={!touched.password ? "" : errors.password}
-                                 hasFeedback>
+                            <Form.Item validateStatus={validateField("password", touched, errors)}
+                                       help={!touched.password ? "" : errors.password}
+                                       hasFeedback
+                            >
                                 <Input
                                     id="password"
                                     size="large"
@@ -64,11 +65,14 @@ const RegisterForm = props => {
                                     onBlur={handleBlur}
                                 />
                             </Form.Item>
-                            <Form.Item validateStatus="success"
-                                 hasFeedback>
+                            <Form.Item
+                                validateStatus={validateField("password", touched, errors)}
+                            >
                                 <Input
-                                    size="large"
-                                    prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}}/>}
+                                    prefix={
+                                        <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
+                                    }
+                                    size="large" type="password2"
                                     placeholder="Повторите пароль"
                                 />
                             </Form.Item>
