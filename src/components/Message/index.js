@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import waveSvg from '../../assets/img/wave.svg'
+import playSvg from '../../assets/img/play.svg'
+import pauseSvg from '../../assets/img/pause.svg'
 
 import { Time, IconReaded } from "../";
 
@@ -44,10 +47,13 @@ const Message = ({
                         {audio && <div className="message__audio">
                             <div className="message__audio-prgress" style={{ width: '40%' }}></div>
                             <div className="message__audio-info">
-                                <div className="btn">
+                                <div className="message__audio-btn">
                                     <button>...</button>
                                 </div>
-                                <div className="message__audio-wave"></div>
+                                <div className="message__audio-wave"><img src={waveSvg} alt="Wave Svg"/></div>
+                                <span className="message__audio-duration">
+                                    00:19
+                                </span>
                             </div>
                         </div>}
                     </div>
