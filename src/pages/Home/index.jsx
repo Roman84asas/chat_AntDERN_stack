@@ -15,7 +15,7 @@ const Home = () => (
                         user: {
                             _id: 1,
                             fullname: "Роман В",
-                            avatar: null
+                            avatar: 'https://sun1-89.userapi.com/c847216/v847216083/1d367d/9TGvLbZGnSg.jpg?ava=1'
                         },
                     },
                     {
@@ -24,8 +24,8 @@ const Home = () => (
                         created_at: "Sun Aug 18 2019 18:12:52",
                         user: {
                             _id: 2,
-                            fullname: "Евгения Р",
-                            avatar: null
+                            fullname: "Лихи Р",
+                            avatar: 'https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1'
                         },
                     }
                 ]}
