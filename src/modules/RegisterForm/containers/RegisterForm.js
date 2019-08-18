@@ -13,7 +13,7 @@ export default withFormik({
 
         if (!values.password) {
             errors.password = 'Введите пароль';
-        } else if (!/(?=.*[a-zA-Z0-9])/i.test(values.password)) {
+        } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/i.test(values.password)) {
             errors.password = 'Невалидный пароль';
         }
         return errors;

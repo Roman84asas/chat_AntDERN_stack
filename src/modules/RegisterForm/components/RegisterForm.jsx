@@ -1,5 +1,5 @@
 import React from 'react';
-import {Checkbox, Form, Icon, Input} from "antd";
+import { Form, Icon, Input} from "antd";
 import {Button, InputBlock} from "../../../components";
 import {Link} from "react-router-dom";
 
@@ -14,6 +14,8 @@ const RegisterForm = props => {
         handleChange,
         handleBlur,
         handleSubmit,
+        isValid,
+        isSubmitting
     } = props;
     return (
         <div>
@@ -25,7 +27,8 @@ const RegisterForm = props => {
                 {!success ? (
                         <Form onSubmit={handleSubmit} className="login-form">
                             <Form.Item validateStatus={
-                                !touched.email ? ' ' : errors.email ? "error" : "success"}
+                                !touched.email ? "" : errors.email ? "error" : "success"}
+                                 help={!touched.email ? "" : errors.email}
                                 hasFeedback>
                                 <Input
                                     id="email"
@@ -47,8 +50,9 @@ const RegisterForm = props => {
                                 />
                             </Form.Item>
                             <Form.Item validateStatus={
-                                !touched.password ? ' ' : errors.password ? "error" : "success"}
-                                hasFeedback>
+                                !touched.password ? "" : errors.password ? "error" : "success"}
+                                 help={!touched.password ? "" : errors.password}
+                                 hasFeedback>
                                 <Input
                                     id="password"
                                     size="large"
@@ -69,7 +73,7 @@ const RegisterForm = props => {
                                 />
                             </Form.Item>
                             <Form.Item>
-                                <Checkbox>Сохранить данные</Checkbox>
+                                { isSubmitting && !isValid && <span>Ошибка!</span> }
                                 <Button onClick={handleSubmit} type="primary" htmlType="submit" size="large" className="login-form-button" block>
                                     Зарегистрироваться
                                 </Button>
