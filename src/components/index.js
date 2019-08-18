@@ -3,5 +3,6 @@ export { default as Block } from './Block';
 export { default as InputBlock } from './InputBlock';
 export { default as Message } from './Message';
 export { default as DialogItem } from "./DialogItem";
+export { default as Dialogs} from "./Dialogs";
 export { default as Time } from "./Time";
 export { default as IconReaded } from "./IconReaded";

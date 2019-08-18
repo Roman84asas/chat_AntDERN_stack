@@ -1,51 +1,31 @@
 import React from 'react';
-import { DialogItem } from "../../components";
+import { Dialogs } from "../../components";
 
 import  './Home.scss';
 
 const Home = () => (
         <section className="home">
-
-
-            <div className="dialogs">
-                <DialogItem
-                    user={{
-                        fullname: "Роман В",
-                        isOnline: false
-                    }}
-                    unreaded={999}
-                />
-                <DialogItem
-                    user={{
-                        fullname: "Роман В",
-                        isOnline: true
-                    }}
-                    unreaded={0}
-                />
-                <DialogItem
-                    user={{
-                        fullname: "Роман В",
-                        isOnline: false
-                    }}
-                    unreaded={0}
-                />
-            </div>
-            {/* <Dialogs
+            <Dialogs
                 items={[
                     {
-                      user: {
-                        fullname: "Фёдор Достоевский",
-                        avatar: null
-                      },
-                      message: {
-                        text:
-                          "Мы все свидетельствуем Вам глубочайшее наше почтение и целуем Ваши ручки, дражайший папенька: Михайла, Федор, Варвара и Андрюша",
-                        isReaded: false,
-                        created_at: new Date()
-                      }
+                        _id: Math.random(),
+                        user: {
+                            fullname: "Роман В",
+                            avatar: null
+                        },
+                        lastMessage: {
+                            text:
+                                "Шалом мой дорогой друг, как Вы отпраздновали Шабат??\n" +
+                                "Б-г в помощь Вам на этой неделе",
+                            isReaded: false,
+                            created_at: "Mun Aug 12 2019 18:12:52"
+                        }
                     }
-                  ]}
-                /> */}
+                ]}
+            />
+
+
+            {/*  */}
             {/* <Message
               avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
               text="Мы тут недавно войска Ариовиста разбили, чуваки хотели закрепиться на галльских землях, лол 🌝"

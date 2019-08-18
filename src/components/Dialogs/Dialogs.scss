@@ -82,9 +82,8 @@
           box-shadow: 0 0 0px 3px #fff;
         }
         .message__icon-readed {
-          bottom: 0;
-          left: auto;
-          right: 0;
+          position: absolute;
+          right: 0px;
         }
       }
     }
