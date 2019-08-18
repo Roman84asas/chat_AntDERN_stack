@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialogs } from "../../components";
+import {Dialogs, Message} from "../../components";
 
 import  './Home.scss';
 
@@ -29,6 +29,12 @@ const Home = () => (
                         },
                     }
                 ]}
+            />
+            <Message
+                avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                date="Sun Apr 21 2019 21:55:29"
+                audio="https://notificationsounds.com/soundfiles/069059b7ef840f0c74a814ec9237b6ec/file-de_vuvuzela-power-down.mp3"
+                user="Лихи Р"
             />
 
 
