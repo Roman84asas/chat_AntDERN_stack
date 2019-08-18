@@ -6,20 +6,27 @@ import  './Home.scss';
 const Home = () => (
         <section className="home">
             <Dialogs
+                userId={0}
                 items={[
                     {
                         _id: Math.random(),
+                        text: "Шалом мой дорогой друг, как Вы отпраздновали Шабат??. Б-г в помощь Вам на этой неделе",
+                        created_at: "Mun Aug 12 2019 18:12:52",
                         user: {
+                            _id: 1,
                             fullname: "Роман В",
                             avatar: null
                         },
-                        lastMessage: {
-                            text:
-                                "Шалом мой дорогой друг, как Вы отпраздновали Шабат??\n" +
-                                "Б-г в помощь Вам на этой неделе",
-                            isReaded: false,
-                            created_at: "Mun Aug 12 2019 18:12:52"
-                        }
+                    },
+                    {
+                        _id: Math.random(),
+                        text: "Все отлично друг, работаем как всегда. Делаю новое видео",
+                        created_at: "Sun Aug 18 2019 18:12:52",
+                        user: {
+                            _id: 2,
+                            fullname: "Евгения Р",
+                            avatar: null
+                        },
                     }
                 ]}
             />

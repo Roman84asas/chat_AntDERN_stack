@@ -26,7 +26,7 @@ const getAvatar = avatar => {
     }
 };
 
-const DialogItem = ({ user, message, unreaded }) => (
+const DialogItem = ({ user, message, unreaded, isMe }) => (
     <div
         className={classNames("dialogs__item", {
             "dialogs__item--online": user.isOnline
@@ -41,15 +41,11 @@ const DialogItem = ({ user, message, unreaded }) => (
         <div className="dialogs__item-info">
             <div className="dialogs__item-info-top">
                 <b>Роман В</b>
-                <span>
-                    { getMessageTime(message.created_at)}
-                </span>
+                <span>{ getMessageTime(message.created_at)}</span>
             </div>
             <div className="dialogs__item-info-bottom">
-                <p>
-                    {message.text}
-                </p>
-                <IconReaded isMe={true} isReaded={false} />
+                <p>{message.text}</p>
+                {!isMe && <IconReaded isMe={true} isReaded={false} />}
                 {unreaded > 0 && (
                     <div className="dialogs__item-info-bottom-count">
                         {unreaded > 9 ? "+9" : unreaded}
