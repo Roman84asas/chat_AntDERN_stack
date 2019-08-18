@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import { Time, IconReaded } from "../";
+import { IconReaded } from "../";
 
 import "./DialogItem.scss";
 
