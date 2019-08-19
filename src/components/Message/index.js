@@ -1,6 +1,9 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
+
+
 import waveSvg from '../../assets/img/wave.svg'
 import playSvg from '../../assets/img/play.svg'
 import pauseSvg from '../../assets/img/pause.svg'
@@ -21,11 +24,22 @@ const Message = ({
                      isTyping
                  }) => {
     const [isPlay, setIsPlaying] = useState(false);
+    const [progress, setProgress] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);
+
     const audioRef = useRef(null);
-    const tofflePlay = () => {
-        audioRef.current.volume = "0.03";
-        audioRef.current.play();
+
+    const togglePlay = () => {
+        if (!isPlay) {
+            audioRef.current.play();
+        } else {
+            audioRef.current.pause();
+        }
     };
+
+    audioRef.addEventListener('playing', () => {
+        setIsPlaying(true);
+        }, false );
 
     return (
         <div
@@ -57,7 +71,7 @@ const Message = ({
                                 <div className="message__audio-progress" style={{ width: '50%' }}></div>
                                 <div className="message__audio-info">
                                     <div className="message__audio-btn">
-                                        <button onClick={tofflePlay}>
+                                        <button onClick={togglePlay}>
                                             {isPlay ? <img src={pauseSvg} alt="Pause Svg"/> : <img src={playSvg} alt="Play Svg"/>}
                                         </button>
                                     </div>
