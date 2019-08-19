@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { convertCurrentTime } from "../../utils/helpers";
 
 
 
@@ -37,9 +38,37 @@ const Message = ({
         }
     };
 
-    audioRef.addEventListener('playing', () => {
-        setIsPlaying(true);
-        }, false );
+    useEffect(() => {
+        audioRef.current.volume = "0.01";
+        audioRef.current.addEventListener(
+            "playing",
+            () => {
+                setIsPlaying(true);
+            },
+            false
+        );
+        audioRef.current.addEventListener(
+            "ended",
+            () => {
+                setIsPlaying(false);
+                setProgress(0);
+                setCurrentTime(0);
+            },
+            false
+        );
+        audioRef.current.addEventListener(
+            "pause",
+            () => {
+                setIsPlaying(false);
+            },
+            false
+        );
+        audioRef.current.addEventListener("timeupdate", () => {
+            const duration = (audioRef.current && audioRef.current.duration) || 0;
+            setCurrentTime(audioRef.current.currentTime);
+            setProgress((audioRef.current.currentTime / duration) * 100);
+        });
+    }, []);
 
     return (
         <div
@@ -68,7 +97,10 @@ const Message = ({
                             )}
                             {audio && <div className="message__audio">
                                 <audio ref={audioRef} src={audio} preload="auto"/>
-                                <div className="message__audio-progress" style={{ width: '50%' }}></div>
+                                <div
+                                    className="message__audio-progress"
+                                    style={{ width: progress + "%" }}
+                                />
                                 <div className="message__audio-info">
                                     <div className="message__audio-btn">
                                         <button onClick={togglePlay}>
@@ -77,8 +109,8 @@ const Message = ({
                                     </div>
                                     <div className="message__audio-wave"><img src={waveSvg} alt="Wave Svg"/></div>
                                     <span className="message__audio-duration">
-                                    00:19
-                                </span>
+                                        {convertCurrentTime(currentTime)}
+                                    </span>
                                 </div>
                             </div>}
                         </div>
