@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { convertCurrentTime } from "../../utils/helpers";
+import { Popover, Button } from "antd";
 
 
 
@@ -9,7 +10,7 @@ import waveSvg from '../../assets/img/wave.svg'
 import playSvg from '../../assets/img/play.svg'
 import pauseSvg from '../../assets/img/pause.svg'
 
-import { Time, IconReaded } from "../";
+import { Time, IconReaded, Avatar } from "../";
 
 import './Message.scss';
 
@@ -113,7 +114,18 @@ const Message = ({
         >
             <div className="message__content">
                 <IconReaded isMe={isMe} isReaded={isReaded} />
-
+                <Popover
+                    content={
+                        <div>
+                            <Button onClick={onRemoveMessage}>Удалить сообщение</Button>
+                        </div>
+                    }
+                    trigger="click"
+                >
+                    <div className="message__icon-actions">
+                        <Button type="link" shape="circle" icon="ellipsis" />
+                    </div>
+                </Popover>
                 <div className="message__avatar">
                     <img src={avatar} alt={`Avatar ${user.fullname}` } className="avatar" />
                 </div>
@@ -144,8 +156,8 @@ const Message = ({
 
                     {date && (
                         <span className="message__date">
-              <Time date={date} />
-            </span>
+                            <Time date={date} />
+                        </span>
                     )}
                 </div>
             </div>
