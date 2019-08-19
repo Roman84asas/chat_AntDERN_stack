@@ -2,7 +2,6 @@
 
 .message {
   $self: &;
-
   &__content {
     display: flex;
     max-width: 440px;
@@ -10,6 +9,7 @@
     position: relative;
 
   }
+
   &__icon-read {
     position: absolute;
     bottom: 25px;
@@ -62,6 +62,26 @@
     }
   }
 
+  &--is-audio {
+    #{$self}__audio {
+      &-btn {
+        button {
+          bottom: 0;
+          border: 0;
+          padding: 0px;
+          width: 28px;
+          height: 28px;
+          border-radius: 30px;
+          background-color: #0f3997;
+          img {
+            height: 12px;
+
+          }
+        }
+      }
+    }
+  }
+
   &--isme {
     display: flex;
     flex-direction: row-reverse;
@@ -79,7 +99,7 @@
     }
 
     #{$self}__info {
-    text-align: right;
+      text-align: right;
     }
 
     #{$self}__dubble {
@@ -134,6 +154,10 @@
     }
   }
 }
+
+
+
+
 
 @keyframes typingAnimation {
   from {
