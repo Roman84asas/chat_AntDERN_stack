@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import waveSvg from '../../assets/img/wave.svg'
@@ -21,6 +21,11 @@ const Message = ({
                      isTyping
                  }) => {
     const [isPlay, setIsPlaying] = useState(false);
+    const audioRef = useRef(null);
+    const tofflePlay = () => {
+        audioRef.current.volume = "0.03";
+        audioRef.current.play();
+    };
 
     return (
         <div
@@ -48,10 +53,11 @@ const Message = ({
                                 </div>
                             )}
                             {audio && <div className="message__audio">
-                                <div className="message__audio-prgress" style={{ width: '40%' }}></div>
+                                <audio ref={audioRef} src={audio} preload="auto"/>
+                                <div className="message__audio-progress" style={{ width: '50%' }}></div>
                                 <div className="message__audio-info">
                                     <div className="message__audio-btn">
-                                        <button>
+                                        <button onClick={tofflePlay}>
                                             {isPlay ? <img src={pauseSvg} alt="Pause Svg"/> : <img src={playSvg} alt="Play Svg"/>}
                                         </button>
                                     </div>
@@ -142,7 +148,7 @@ Message.propTypes = {
     avatar: PropTypes.string,
     text: PropTypes.string,
     date: PropTypes.string,
-    user: PropTypes.object,
+    user: PropTypes.string,
     attachments: PropTypes.array,
     isMe: PropTypes.bool,
     isReaded: PropTypes.bool,
