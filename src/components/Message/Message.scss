@@ -63,19 +63,28 @@
   }
 
   &--is-audio {
+    #{$self}__bubble {
+      width: 280px;
+      position: relative;
+      overflow: hidden;
+    }
     #{$self}__audio {
+      &-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
       &-btn {
         button {
-          bottom: 0;
+          cursor: pointer;
           border: 0;
-          padding: 0px;
           width: 28px;
           height: 28px;
           border-radius: 30px;
-          background-color: #0f3997;
+          background: #0f3997;
           img {
-            height: 12px;
-
+            height: 13px;
           }
         }
       }
