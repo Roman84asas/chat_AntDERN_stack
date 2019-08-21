@@ -10,7 +10,7 @@ import waveSvg from '../../assets/img/wave.svg'
 import playSvg from '../../assets/img/play.svg'
 import pauseSvg from '../../assets/img/pause.svg'
 
-import { Time, IconReaded } from "../";
+import { Time, IconReaded, Avatar } from "../";
 
 import './Message.scss';
 
@@ -93,6 +93,7 @@ const MessageAudio = ({audioSrc}) => {
 
 const Message = ({
                      avatar,
+                     fullname,
                      user,
                      text,
                      date,
@@ -127,7 +128,7 @@ const Message = ({
                     </div>
                 </Popover>
                 <div className="message__avatar">
-                    <img src={avatar} alt={`Avatar ${user.fullname}` } className="avatar" />
+                    <Avatar user={user} />
                 </div>
                 <div className="message__info">
                     {(audio || text || isTyping) && (
@@ -170,6 +171,7 @@ Message.defaultProps = {
 
 Message.propTypes = {
     avatar: PropTypes.string,
+    fullname: PropTypes.string,
     text: PropTypes.string,
     date: PropTypes.string,
     user: PropTypes.object,

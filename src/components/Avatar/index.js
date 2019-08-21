@@ -16,14 +16,19 @@ const Avatar = ({ user }) => {
 
         );
     } else {
-        const firstChar = user.fullname[0].toUpperCase();
-        return (
-            <div
-                className="avatar avatar--symbol"
-            >
-                {firstChar}
-            </div>
-        );
+        const firstChar = 'N';
+        if (firstChar) {
+            return (
+                <div
+                    className="avatar avatar--symbol"
+                >
+                    {firstChar}
+                </div>
+            );
+        } else {
+
+        }
+
     }
 };
 
