@@ -10,7 +10,7 @@ import waveSvg from '../../assets/img/wave.svg'
 import playSvg from '../../assets/img/play.svg'
 import pauseSvg from '../../assets/img/pause.svg'
 
-import { Time, IconReaded, Avatar } from "../";
+import { Time, IconReaded } from "../";
 
 import './Message.scss';
 
