@@ -1,8 +1,10 @@
 import React from 'react';
-import { Icon } from 'antd';
+import { Icon, Input  } from 'antd';
 import {Dialogs, Message} from "../../components";
 
 import  './Home.scss';
+
+const { Search } = Input;
 
 const Home = () => (
         <section className="home">
@@ -19,7 +21,11 @@ const Home = () => (
                     </div>
 
                     <div className="chat__sidebar-search">
-
+                        <Search
+                            placeholder="Найти контакт.."
+                            onSearch={value => console.log(value)}
+                            style={{ width: 200 }}
+                        />
                     </div>
                 </div>
 
