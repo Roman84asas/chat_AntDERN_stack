@@ -145,17 +145,17 @@ const Home = () => (
                                 <div className="status status--online" >online</div>
                             </div>
                         </div>
-                        <Icon type="ellipsis" />
+                        <Icon type="ellipsis" style={{ fontSize: '25px'}}/>
                     </div>
-                    <div className="chat__dialog--messages">
+                    <div className="chat__dialog-messages">
                         <Message
                             fullname="Лихи Р"
-                            avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                            avatar="https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1"
                             date="Sun Apr 21 2019 21:55:29"
                             audio="https://notificationsounds.com/soundfiles/069059b7ef840f0c74a814ec9237b6ec/file-de_vuvuzela-power-down.mp3"
                         />
                         <Message
-                            avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                            avatar="https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1"
                             text="Мы тут недавно войска Ариовиста разбили, чуваки хотели закрепиться на галльских землях, лол 🌝"
                             date="Sun Apr 21 2019 21:55:29"
                             attachments={[
@@ -181,7 +181,7 @@ const Home = () => (
                             isReaded={false}
                         />
                         <Message
-                            avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                            avatar="https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1"
                             attachments={[
                                 {
                                     filename: "image.jpg",

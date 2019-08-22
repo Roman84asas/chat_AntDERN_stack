@@ -64,6 +64,23 @@
       align-items: center;
       padding: 12px;
       border-bottom: 1px solid #f7f7f7;
+
+      &-center {
+        text-align: center;
+      }
+
+      &-username {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+
+
+      }
+
+    }
+    &-messages {
+      height: calc(100% - 138px);
+      padding: 30px;
     }
   }
 }
