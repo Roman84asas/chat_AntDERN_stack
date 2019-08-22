@@ -1,7 +1,5 @@
 import React from "react";
 import orderBy from 'lodash/orderBy';
-//import classNames from "classnames";
-//import isToday from 'date-fns/is_today';
 
 import "./Dialogs.scss";
 import {DialogItem} from "../";

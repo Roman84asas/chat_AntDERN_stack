@@ -5,7 +5,19 @@ import  './Home.scss';
 
 const Home = () => (
         <section className="home">
-            <Dialogs
+            <div className="chat">
+                <div className="chat__sidebar">
+                    <div className="chat__sidebar-header">
+
+                    </div>
+                </div>
+                <div className="chat__current-dialog">
+                </div>
+            </div>
+
+
+
+            {/*<Dialogs
                 userId={0}
                 items={[
                     {
@@ -29,14 +41,14 @@ const Home = () => (
                         },
                     }
                 ]}
-            />
-            <Message
+            />*/}
+            {/*<Message
 
                 fullname="Лихи Р"
                 avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
                 date="Sun Apr 21 2019 21:55:29"
                 audio="https://notificationsounds.com/soundfiles/069059b7ef840f0c74a814ec9237b6ec/file-de_vuvuzela-power-down.mp3"
-            />
+            />*/}
 
 
             {/*  */}
