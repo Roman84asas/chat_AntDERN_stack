@@ -39,13 +39,31 @@
 
     &-dialogs {
       .dialogs {
-        padding: 0 20px;
-      }
+        height: 100%;
+        overflow: auto;
+        &__item {
+          padding: 10px 20px;
+          margin-bottom: 0;
+          cursor: pointer;
 
+          &.active,
+          &:hover {
+            background-color: #e6e4f9;
+          }
+        }
+      }
     }
   }
   &__dialog {
     flex: 1;
     position: relative;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid #f7f7f7;
+    }
   }
 }

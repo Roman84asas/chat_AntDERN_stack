@@ -138,6 +138,7 @@ const Home = () => (
 
                 <div className="chat__dialog">
                     <div className="chat__dialog-header">
+                        <div />
                         <div className="chat__dialog-header-center">
                             <b className="chat__dialog-header-username">Роман B</b>
                             <div className="chat__dialog-header-status">
@@ -146,62 +147,51 @@ const Home = () => (
                         </div>
                         <Icon type="ellipsis" />
                     </div>
-
+                    <div className="chat__dialog--messages">
+                        <Message
+                            fullname="Лихи Р"
+                            avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                            date="Sun Apr 21 2019 21:55:29"
+                            audio="https://notificationsounds.com/soundfiles/069059b7ef840f0c74a814ec9237b6ec/file-de_vuvuzela-power-down.mp3"
+                        />
+                        <Message
+                            avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                            text="Мы тут недавно войска Ариовиста разбили, чуваки хотели закрепиться на галльских землях, лол 🌝"
+                            date="Sun Apr 21 2019 21:55:29"
+                            attachments={[
+                                {
+                                    filename: "image.jpg",
+                                    url: "https://source.unsplash.com/100x100/?random=1&nature,water"
+                                },
+                                {
+                                    filename: "image.jpg",
+                                    url: "https://source.unsplash.com/100x100/?random=2&nature,water"
+                                },
+                                {
+                                    filename: "image.jpg",
+                                    url: "https://source.unsplash.com/100x100/?random=3&nature,water"
+                                }
+                            ]}
+                        />
+                        <Message
+                            avatar="https://sun1-89.userapi.com/c847216/v847216083/1d367d/9TGvLbZGnSg.jpg?ava=1"
+                            text=" И тебе привет)))"
+                            date="Sun Apr 21 2019 21:59:29"
+                            isMe={true}
+                            isReaded={false}
+                        />
+                        <Message
+                            avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
+                            attachments={[
+                                {
+                                    filename: "image.jpg",
+                                    url: "https://source.unsplash.com/100x100/?random=1&nature,water"
+                                }
+                            ]}
+                        />
+                    </div>
                 </div>
             </div>
-
-
-
-            {/**/}
-            {/*<Message
-
-                fullname="Лихи Р"
-                avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
-                date="Sun Apr 21 2019 21:55:29"
-                audio="https://notificationsounds.com/soundfiles/069059b7ef840f0c74a814ec9237b6ec/file-de_vuvuzela-power-down.mp3"
-            />*/}
-
-
-            {/*  */}
-            {/* <Message
-              avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
-              text="Мы тут недавно войска Ариовиста разбили, чуваки хотели закрепиться на галльских землях, лол 🌝"
-              date="Sun Apr 21 2019 21:55:29"
-              attachments={[
-                {
-                  filename: "image.jpg",
-                  url: "https://source.unsplash.com/100x100/?random=1&nature,water"
-                },
-                {
-                  filename: "image.jpg",
-                  url: "https://source.unsplash.com/100x100/?random=2&nature,water"
-                },
-                {
-                  filename: "image.jpg",
-                  url: "https://source.unsplash.com/100x100/?random=3&nature,water"
-                }
-              ]}
-            />
-            <Message
-              avatar="https://sun1-89.userapi.com/c850424/v850424867/f6869/B-F_i2BilOA.jpg?ava=1"
-              text="Hello, World!"
-              date="Sun Apr 21 2019 21:59:29"
-              isMe={true}
-              isReaded={false}
-            />
-            <Message
-              avatar="https://pp.userapi.com/c846017/v846017841/18957c/1iVH9FKXi4E.jpg?ava=1"
-              attachments={[
-                {
-                  filename: "image.jpg",
-                  url: "https://source.unsplash.com/100x100/?random=1&nature,water"
-                }
-              ]}
-            />
-            <Message
-              avatar="https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1"
-              isTyping
-            /> */}
         </section>
 );
 

@@ -23,7 +23,6 @@ const DialogItem = ({ user, unreaded, text, isMe, created_at }) => {
         })}
     >
         <div className="dialogs__item-avatar">
-            {/* <img src={user.avatar} alt={`${user.fullname} avatar`} /> */}
             <Avatar user={ user }/>
 
         </div>
