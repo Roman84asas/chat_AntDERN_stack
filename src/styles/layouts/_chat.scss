@@ -1,0 +1,35 @@
+.chat {
+  display: flex;
+  height: 100%;
+  background-color: #fff;
+  min-width:375px;
+  margin: 0px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.04204);
+
+  &__sidebar {
+    width: 320px;
+    border-right: 1px solid #f7f7f7;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 21px;
+      height: 58px;
+      border-bottom: 1px solid #f7f7f7;
+      margin-bottom: 20px;
+      align-items: center;
+
+      .ant-btn-circle {
+        position: relative;
+        left: 5px;
+      }
+
+      & > div {
+        i {
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

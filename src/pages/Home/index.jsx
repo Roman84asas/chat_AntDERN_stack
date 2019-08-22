@@ -24,43 +24,55 @@ const Home = () => (
                         <Search
                             placeholder="Найти контакт.."
                             onSearch={value => console.log(value)}
-                            style={{ width: 200 }}
                         />
                     </div>
+                    <div className="chat__sidebar-dialogs">
+                        <Dialogs
+                            userId={0}
+                            items={[
+                                {
+                                    _id: Math.random(),
+                                    text: "Шалом мой дорогой друг, как Вы отпраздновали Шабат??. Б-г в помощь Вам на этой неделе",
+                                    created_at: "Mun Aug 12 2019 18:12:52",
+                                    user: {
+                                        _id: 1,
+                                        fullname: "Роман В",
+                                        avatar: 'https://sun1-89.userapi.com/c847216/v847216083/1d367d/9TGvLbZGnSg.jpg?ava=1'
+                                    },
+                                },
+                                {
+                                    _id: Math.random(),
+                                    text: "Все отлично друг, работаем как всегда. Делаю новое видео",
+                                    created_at: "Sun Aug 18 2019 18:12:52",
+                                    user: {
+                                        _id: 2,
+                                        fullname: "Лихи Р",
+                                        avatar: 'https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1'
+                                    },
+                                }
+                            ]}
+                        />
+                    </div>
+
                 </div>
 
-                <div className="chat__current-dialog">
+                <div className="chat__dialog">
+                    <div className="chat__dialog-header">
+                        <div className="chat__dialog-header-center">
+                            <b className="chat__dialog-header-username">Роман B</b>
+                            <div className="chat__dialog-header-status">
+                                <div className="status status--online" >online</div>
+                            </div>
+                        </div>
+                        <Icon type="ellipsis" />
+                    </div>
 
                 </div>
             </div>
 
 
 
-            {/*<Dialogs
-                userId={0}
-                items={[
-                    {
-                        _id: Math.random(),
-                        text: "Шалом мой дорогой друг, как Вы отпраздновали Шабат??. Б-г в помощь Вам на этой неделе",
-                        created_at: "Mun Aug 12 2019 18:12:52",
-                        user: {
-                            _id: 1,
-                            fullname: "Роман В",
-                            avatar: 'https://sun1-89.userapi.com/c847216/v847216083/1d367d/9TGvLbZGnSg.jpg?ava=1'
-                        },
-                    },
-                    {
-                        _id: Math.random(),
-                        text: "Все отлично друг, работаем как всегда. Делаю новое видео",
-                        created_at: "Sun Aug 18 2019 18:12:52",
-                        user: {
-                            _id: 2,
-                            fullname: "Лихи Р",
-                            avatar: 'https://sun9-33.userapi.com/c841324/v841324414/1e790/6LB5VrjE_Ls.jpg?ava=1'
-                        },
-                    }
-                ]}
-            />*/}
+            {/**/}
             {/*<Message
 
                 fullname="Лихи Р"
