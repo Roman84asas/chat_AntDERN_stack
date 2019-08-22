@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'antd';
 import {Dialogs, Message} from "../../components";
 
 import  './Home.scss';
@@ -7,11 +8,23 @@ const Home = () => (
         <section className="home">
             <div className="chat">
                 <div className="chat__sidebar">
+
                     <div className="chat__sidebar-header">
+                        <div>
+                            <Icon type="team" />
+                            <span >Список диалогов</span>
+
+                        </div>
+                        <Icon type="form" />
+                    </div>
+
+                    <div className="chat__sidebar-search">
 
                     </div>
                 </div>
+
                 <div className="chat__current-dialog">
+
                 </div>
             </div>
 
