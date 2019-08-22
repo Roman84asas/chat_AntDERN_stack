@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, Input  } from 'antd';
-import {Dialogs, Message} from "../../components";
+import {Dialogs, Message, Status} from "../../components";
 
 import  './Home.scss';
 
@@ -142,7 +142,7 @@ const Home = () => (
                         <div className="chat__dialog-header-center">
                             <b className="chat__dialog-header-username">Роман B</b>
                             <div className="chat__dialog-header-status">
-                                <div className="status status--online" >online</div>
+                                <Status online />
                             </div>
                         </div>
                         <Icon type="ellipsis" style={{ fontSize: '25px'}}/>
@@ -189,6 +189,10 @@ const Home = () => (
                                 }
                             ]}
                         />
+                    </div>
+                    <div className="chat__dialog-input">
+                        <Icon  type="smile"/>
+                        <Input placeholder="Напишите сообщение" />
                     </div>
                 </div>
             </div>
