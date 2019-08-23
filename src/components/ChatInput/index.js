@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import {Icon, Input} from "antd";
+import { Input, Button} from "antd";
 
 import "./ChatInput.scss";
 
 
-const ChatInput = (props) => {
+const ChatInput = props => {
+    const [value, setValue] = useState("");
     return (
         <div className="chat-input">
             <div className="chat-input__smile-btn">
-                <Icon type="smile" />
+                <Button type="link" shape="circle" icon="smile" />
             </div>
             <Input
                 size="large"
                 placeholder="Напишите сообщение"
+                onChange={e => setValue(e.target.value)}
             />
             <div className="chat-input__actions">
-                <Icon type="camera" />
-                <Icon type="audio" />
-                <Icon type="check-circle" />
+                <Button type="link" shape="circle" icon="camera" />
+                {value ? (
+                    <Button type="link" shape="circle" icon="check-circle" />
+                ) : (
+                    <Button type="link" shape="circle" icon="audio" />
+                )}
             </div>
         </div>
     );
