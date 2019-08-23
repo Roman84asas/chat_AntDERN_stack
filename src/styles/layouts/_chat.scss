@@ -6,6 +6,8 @@
   margin: 0px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.04204);
 
+
+
   &__sidebar {
     width: 320px;
     border-right: 1px solid #e0e2f7;
@@ -26,16 +28,7 @@
       }
     }
 
-    &-search {
-      padding: 0 20px 20px 20px;
 
-      .ant-input {
-        background-color: #edecf9;
-        border: 0;
-        height: 36px;
-        padding: 4px 11px 6px;
-      }
-    }
 
     &-dialogs {
       height: calc(100% - 136px);

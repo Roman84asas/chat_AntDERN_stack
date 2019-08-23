@@ -103,7 +103,6 @@ const Message = ({
                      isTyping,
                      onRemoveMessage
                  }) => {
-    console.log(user.fullname);
     return (
         <div
             className={classNames("message", {

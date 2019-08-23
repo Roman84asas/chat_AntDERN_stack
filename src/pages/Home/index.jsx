@@ -1,11 +1,9 @@
 import React from 'react';
-import {Button, Icon, Input} from 'antd';
+import {Button, Icon } from 'antd';
 import { Message, Status, ChatInput} from "../../components";
 import { Dialogs } from "../../containers";
 
 import  './Home.scss';
-
-const { Search } = Input;
 
 const Home = () => (
         <section className="home">
@@ -21,12 +19,7 @@ const Home = () => (
                         <Button type="link" shape="circle" icon="form" />
                     </div>
 
-                    <div className="chat__sidebar-search">
-                        <Search
-                            placeholder="Найти контакт.."
-                            onSearch={value => console.log(value)}
-                        />
-                    </div>
+
                     <div className="chat__sidebar-dialogs">
                         <Dialogs
                             userId={0}
