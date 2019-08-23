@@ -14,7 +14,7 @@ const getMessageTime = created_at => {
 };
 
 
-const DialogItem = ({ user, unreaded, text, isMe, created_at }) => {
+const DialogItem = ({ user, undread, created_at, text, isMe }) => {
 
     return (
     <div
@@ -34,9 +34,9 @@ const DialogItem = ({ user, unreaded, text, isMe, created_at }) => {
             <div className="dialogs__item-info-bottom">
                 <p>{text}</p>
                 {isMe && <IconReaded isMe={true} isReaded={false} />}
-                {unreaded > 0 && (
+                {undread > 0 && (
                     <div className="dialogs__item-info-bottom-count">
-                        {unreaded > 9 ? "+9" : unreaded}
+                        {undread > 9 ? "+9" : undread}
                     </div>
                 )}
             </div>
