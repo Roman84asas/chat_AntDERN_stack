@@ -38,6 +38,7 @@
     }
 
     &-dialogs {
+      height: calc(100% - 136px);
       .dialogs {
         height: 100%;
         overflow: auto;
@@ -54,9 +55,17 @@
       }
     }
   }
+
   &__dialog {
     flex: 1;
     position: relative;
+
+    .ant-empty {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     &-header {
       display: flex;
@@ -64,6 +73,12 @@
       align-items: center;
       padding: 12px;
       border-bottom: 1px solid #f7f7f7;
+
+      .ant-btn-circle {
+        i {
+          font-size: 22px;
+        }
+      }
 
       &-center {
         text-align: center;

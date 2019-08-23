@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Input  } from 'antd';
+import {Button, Icon, Input} from 'antd';
 import {Dialogs, Message, Status, ChatInput} from "../../components";
 
 import  './Home.scss';
@@ -17,7 +17,7 @@ const Home = () => (
                             <span >Список диалогов</span>
 
                         </div>
-                        <Icon type="form" />
+                        <Button type="link" shape="circle" icon="form" />
                     </div>
 
                     <div className="chat__sidebar-search">
@@ -145,7 +145,7 @@ const Home = () => (
                                 <Status online />
                             </div>
                         </div>
-                        <Icon type="ellipsis" style={{ fontSize: '25px'}}/>
+                        <Button type="link" shape="circle" icon="ellipsis" style={{ fontSize: '25px'}}/>
                     </div>
                     <div className="chat__dialog-messages">
                         <Message
