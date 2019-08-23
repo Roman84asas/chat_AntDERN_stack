@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Dialogs as BaseDialogs } from "../components/Dialogs";
+import { Dialogs as BaseDialogs } from "../components";
 
 
 const Dialogs = ({ items }) => {
