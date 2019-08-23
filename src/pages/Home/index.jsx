@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, Input  } from 'antd';
-import {Dialogs, Message, Status} from "../../components";
+import {Dialogs, Message, Status, ChatInput} from "../../components";
 
 import  './Home.scss';
 
@@ -190,10 +190,7 @@ const Home = () => (
                             ]}
                         />
                     </div>
-                    <div className="chat__dialog-input">
-                        <Icon  type="smile"/>
-                        <Input placeholder="Напишите сообщение" />
-                    </div>
+                    <ChatInput />
                 </div>
             </div>
         </section>
