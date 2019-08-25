@@ -5,7 +5,11 @@ import { dialogsActions } from '../redux/actions';
 import { Dialogs as BaseDialogs } from "../components";
 
 
-const Dialogs = ({ fetchDialogs, items, userId }) => {
+const Dialogs = ({ fetchDialogs,
+                     currentDialogId,
+                     setCurrentDialogId,
+                     items,
+                     userId }) => {
     const [inputValue, setValue] = useState("");
     const [filtred, setFiltredItems] = useState(Array.from(items));
 
@@ -25,12 +29,18 @@ const Dialogs = ({ fetchDialogs, items, userId }) => {
         }
     }, [items]);
 
-    return <BaseDialogs
-        userId={userId}
-        items={filtred}
-        onSearch={onChangeInput}
-        inputValue={inputValue}
-    />
+    return (
+        <BaseDialogs
+            userId={userId}
+            items={filtred}
+            onSearch={onChangeInput}
+            inputValue={inputValue}
+            onSelectDialog={setCurrentDialogId}
+            currentDialogId={currentDialogId}
+    />)
 };
 
-export default connect(({dialogs}) => dialogs, dialogsActions)(Dialogs);
+export default connect(
+    ({ dialogs }) => dialogs,
+    dialogsActions
+)(Dialogs);
