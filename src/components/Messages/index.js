@@ -8,7 +8,10 @@ import { Message } from "../";
 
 import "./Messages.scss";
 
-const Messages = ({ blockRef, isLoading, items }) => {
+const Messages = ({
+                      blockRef,
+                      isLoading,
+                      items }) => {
     return (
         <div
             ref={blockRef}

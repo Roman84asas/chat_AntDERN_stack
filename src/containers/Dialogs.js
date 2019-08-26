@@ -10,6 +10,7 @@ const Dialogs = ({ fetchDialogs,
                      setCurrentDialogId,
                      items,
                      userId }) => {
+
     const [inputValue, setValue] = useState("");
     const [filtred, setFiltredItems] = useState(Array.from(items));
 

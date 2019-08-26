@@ -19,19 +19,21 @@
   &__avatar {
     display: flex;
     flex-direction: column-reverse;
-    img {
+    .avatar {
       border-radius: 50px;
       width: 33px;
       height: 33px;
       margin-right: 13px;
       margin-bottom: 5px;
+      font-size: 14px;
+      line-height: 31px;
     }
   }
 
   &__bubble {
     background: $blue_message;
-    box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.196733);
-    border-radius: 12px 12px 12px 0px;
+    box-shadow: 0 5px 5px rgba(54, 116, 255, 0.196733);
+    border-radius: 12px 12px 12px 0;
     padding: 15px;
     margin-bottom: 8px;
   }
@@ -153,8 +155,8 @@
     #{$self}__bubble {
       background: #ffffff;
       border: 1px solid #ececec;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.0220444);
-      border-radius: 12px 12px 0px 12px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.0220444);
+      border-radius: 12px 12px 0 12px;
       #{$self}__text {
         color: $black;
       }
@@ -164,7 +166,7 @@
   &--is-typing {
     #{$self}__bubble {
       background-color: $message-typing-blue;
-      box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.04);
+      box-shadow: 0 5px 5px rgba(54, 116, 255, 0.04);
       padding: 15px 18px;
       margin-bottom: 0;
     }

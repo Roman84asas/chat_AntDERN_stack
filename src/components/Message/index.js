@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { convertCurrentTime } from "../../utils/helpers";
 import { Popover, Button } from "antd";
+import { Emoji } from "emoji-mart";
 
 
 
@@ -10,7 +11,7 @@ import waveSvg from '../../assets/img/wave.svg'
 import playSvg from '../../assets/img/play.svg'
 import pauseSvg from '../../assets/img/pause.svg'
 
-import { Time, IconReaded } from "../";
+import { Time, IconReaded, Avatar  } from "../";
 
 import './Message.scss';
 
@@ -127,12 +128,17 @@ const Message = ({
                     </div>
                 </Popover>
                 <div className="message__avatar">
-                    <img src={avatar} alt={`Avatar ${user.fullname}`} />
+                    <Avatar user={user} />
                 </div>
                 <div className="message__info">
                     {(audio || text || isTyping) && (
                         <div className="message__bubble">
-                            {text && <p className="message__text">{text}</p>}
+                            {text && (
+                                <p className="message__text">
+                                    <Emoji emoji=":santa::skin-tone-3:" set="apple" size={16} />
+                                    {text}
+                                </p>
+                            )}
                             {isTyping && (
                                 <div className="message__typing">
                                     <span />
