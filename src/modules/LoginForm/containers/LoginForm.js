@@ -2,7 +2,9 @@ import { withFormik } from "formik";
 import LoginForm from "../components/LoginForm";
 import validateForm from "../../../utils/helpers/validate";
 
-export default withFormik({
+import store from "../../../redux/store";
+
+const LoginFormContainer = withFormik({
     enableReinitialize: true,
     mapPropsToValues: () => ({
         email: "",
@@ -15,8 +17,18 @@ export default withFormik({
 
         return errors;
     },
-    handleSubmit: (values, { setSubmitting }) => {
-
+    handleSubmit: (values, { setSubmitting, props }) => {
+        store.dispatch(userActions.fetchUserLogin(values)).then(({status}) => {
+            if (status === "success") {
+                setTimeout(() => {
+                    props.history.push("/");
+                }, 50);
+            }
+            setSubmitting(false);
+        });
     },
+
     displayName: "LoginForm"
 })(LoginForm);
+
+export default LoginFormContainer;
