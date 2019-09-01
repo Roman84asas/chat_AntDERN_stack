@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b0dfa6c-5a0f-4c45-998d-c5b0cba8cf1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/helpers/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/validate.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -170,13 +171,13 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="JSX Harmony" value="3" />
-          <entry key="JavaScript" value="9" />
+          <entry key="JavaScript" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="94" />
+          <entry key="JavaScript" value="163" />
           <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
@@ -184,11 +185,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="357">
+              <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -197,18 +198,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utils/helpers/validate.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -283,9 +272,9 @@
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/core/axios.js" />
-        <option value="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" />
         <option value="$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx" />
         <option value="$PROJECT_DIR$/src/utils/helpers/validate.js" />
+        <option value="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" />
       </list>
     </option>
   </component>
@@ -500,14 +489,7 @@
       <workItem from="1567100893333" duration="414000" />
       <workItem from="1567189347799" duration="1396000" />
       <workItem from="1567255445855" duration="599000" />
-      <workItem from="1567344071987" duration="2654000" />
-    </task>
-    <task id="LOCAL-00028" summary="Add Formik">
-      <created>1566079542283</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1566079542283</updated>
+      <workItem from="1567344071987" duration="3134000" />
     </task>
     <task id="LOCAL-00029" summary="Add Formik">
       <created>1566120163149</created>
@@ -845,15 +827,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567346614702</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="work with Redux and back">
+      <created>1567346743872</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1567346743876</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270362000" />
+    <option name="totallyTimeSpent" value="270842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17123288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1252,16 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
@@ -1276,6 +1254,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

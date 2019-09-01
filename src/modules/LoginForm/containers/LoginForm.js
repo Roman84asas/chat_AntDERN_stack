@@ -3,6 +3,7 @@ import LoginForm from "../components/LoginForm";
 import validateForm from "../../../utils/helpers/validate";
 
 import store from "../../../redux/store";
+import {axios} from "../../../core";
 
 const LoginFormContainer = withFormik({
     enableReinitialize: true,
@@ -18,12 +19,10 @@ const LoginFormContainer = withFormik({
         return errors;
     },
     handleSubmit: (values, { setSubmitting, props }) => {
-        store.dispatch(userActions.fetchUserLogin(values)).then(({status}) => {
-            if (status === "success") {
-                setTimeout(() => {
-                    props.history.push("/");
-                }, 50);
-            }
+        return axios.post("/user/login", values).then(({data}) => {
+            setSubmitting(false);
+        })
+        .catch(() => {
             setSubmitting(false);
         });
     },
