@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b0dfa6c-5a0f-4c45-998d-c5b0cba8cf1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/openNotification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/api/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/api/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -174,13 +177,13 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="JSX Harmony" value="3" />
-          <entry key="JavaScript" value="12" />
+          <entry key="JavaScript" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="224" />
+          <entry key="JavaScript" value="247" />
           <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
@@ -191,8 +194,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="425">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -200,20 +203,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/utils/helpers/index.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+            <state relative-caret-position="391">
+              <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/helpers/validate.js">
+        <entry file="file://$PROJECT_DIR$/src/redux/actions/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="82" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
+            <state relative-caret-position="136">
+              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/api/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utils/api/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -236,9 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/modules/RegisterForm/containers/RegisterForm.js" />
-        <option value="$PROJECT_DIR$/src/pages/Auth/Auth.scss" />
-        <option value="$PROJECT_DIR$/src/modules/RegisterForm/components/RegisterForm.jsx" />
         <option value="$PROJECT_DIR$/src/components/AudioMessage/index.js" />
         <option value="$PROJECT_DIR$/src/utils/helpers/convertCurrentTime.js" />
         <option value="$PROJECT_DIR$/src/components/Avatar/Avatar.scss" />
@@ -254,13 +281,10 @@
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/core/axioc.js" />
         <option value="$PROJECT_DIR$/src/core/index.js" />
-        <option value="$PROJECT_DIR$/src/utils/api/index.js" />
         <option value="$PROJECT_DIR$/src/utils/api/dialogs.js" />
-        <option value="$PROJECT_DIR$/src/redux/actions/index.js" />
         <option value="$PROJECT_DIR$/src/components/Dialogs/Dialogs.scss" />
         <option value="$PROJECT_DIR$/src/containers/index.js" />
         <option value="$PROJECT_DIR$/src/components/Messages/Messages.scss" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/ChatInput/index.js" />
         <option value="$PROJECT_DIR$/src/components/ChatInput/ChatInput.scss" />
         <option value="$PROJECT_DIR$/src/styles/layouts/_chat.scss" />
@@ -269,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/redux/store.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/messages.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/dialogs.js" />
-        <option value="$PROJECT_DIR$/src/redux/actions/messages.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/dialogs.js" />
         <option value="$PROJECT_DIR$/src/pages/Home/index.jsx" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -287,6 +310,13 @@
         <option value="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" />
         <option value="$PROJECT_DIR$/src/utils/helpers/openNotification.js" />
         <option value="$PROJECT_DIR$/src/utils/helpers/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/user.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/actions/user.js" />
+        <option value="$PROJECT_DIR$/src/utils/api/user.js" />
+        <option value="$PROJECT_DIR$/src/redux/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/actions/messages.js" />
+        <option value="$PROJECT_DIR$/src/utils/api/index.js" />
       </list>
     </option>
   </component>
@@ -376,7 +406,34 @@
               <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
               <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
@@ -497,14 +554,7 @@
       <workItem from="1567255445855" duration="599000" />
       <workItem from="1567344071987" duration="3757000" />
       <workItem from="1567358186759" duration="948000" />
-      <workItem from="1567359811832" duration="1174000" />
-    </task>
-    <task id="LOCAL-00030" summary="Add Formik">
-      <created>1566124507532</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1566124507532</updated>
+      <workItem from="1567359811832" duration="3252000" />
     </task>
     <task id="LOCAL-00031" summary="Add Formik">
       <created>1566125009985</created>
@@ -842,11 +892,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567347219931</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="work with Redux and back">
+      <created>1567361068932</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1567361068934</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273587000" />
+    <option name="totallyTimeSpent" value="275665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -873,13 +930,13 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23867229" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17066291" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32719395" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32614556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -887,8 +944,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="RNConsole" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.248104" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23180594" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -924,27 +981,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="work with Redux and back" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/utils/helpers/generateAvatarFromHash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Avatar/Avatar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Status/Status.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/InputBlock/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1054,13 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/api/dialogs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1068,45 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="56" lean-forward="true" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/api/messages.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/dialogs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1121,13 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1236,6 +1223,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/helpers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/helpers/validate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1250,20 +1244,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/dialogs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="425">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/helpers/index.js">
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/api/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
         </state>
       </provider>
     </entry>
