@@ -15,15 +15,15 @@ const getMessageTime = created_at => {
 
 
 const DialogItem = ({
-                                           _id,
-                                           user,
-                                           undread,
-                                           created_at,
-                                           text,
-                                           isMe,
-                                           currentDialogId,
-                                           onSelect
-                                       }) => (
+                        _id,
+                        user,
+                        undread,
+                        created_at,
+                        text,
+                        isMe,
+                        currentDialogId,
+                        onSelect
+                    }) => (
     <div
         className={classNames("dialogs__item", {
             "dialogs__item--online": user.isOnline,

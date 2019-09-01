@@ -7,13 +7,13 @@ import {DialogItem} from "../";
 import "./Dialogs.scss";
 
 const Dialogs = ({
-                                     items,
-                                     userId,
-                                     onSearch,
-                                     inputValue,
-                                     currentDialogId,
-                                     onSelectDialog
-                                 }) => (
+                     items,
+                     userId,
+                     onSearch,
+                     inputValue,
+                     currentDialogId,
+                     onSelectDialog
+                 }) => (
     <div className="dialogs">
 
         <div className="dialogs__search">
