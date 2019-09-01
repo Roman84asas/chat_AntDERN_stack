@@ -22,12 +22,6 @@
     position: absolute;
     bottom: 50px;
     z-index: 1;
-
-    .emoji-mart {
-      .emoji-mart-bar {
-        display: none;
-      }
-    }
   }
 
   &__actions {
@@ -36,16 +30,16 @@
     width: 80px;
     justify-content: space-between;
     margin-left: 15px;
-  }
 
-  &-upload-btn {
-    cursor: pointer;
-    input {
+    &-upload-btn {
       cursor: pointer;
-    }
-    &:hover {
-      button {
-        opacity: 1;
+      input {
+        cursor: pointer;
+      }
+      &:hover {
+        button {
+          opacity: 1;
+        }
       }
     }
   }

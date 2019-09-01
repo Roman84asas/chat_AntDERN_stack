@@ -1,35 +1,36 @@
 import { withFormik } from "formik";
+
 import LoginForm from "../components/LoginForm";
-import validateForm from "../../../utils/helpers/validate";
+
+import validateForm from "../../../utils/validate";
+import { userActions } from "../../../redux/actions";
 
 import store from "../../../redux/store";
-import {axios} from "../../../core";
 
 const LoginFormContainer = withFormik({
-    enableReinitialize: true,
-    mapPropsToValues: () => ({
-        email: "",
-        password: ""
-    }),
-    validate: values => {
-        let errors = {};
+  enableReinitialize: true,
+  mapPropsToValues: () => ({
+    email: "",
+    password: ""
+  }),
+  validate: values => {
+    let errors = {};
 
-        validateForm({ isAuth: true, values, errors });
+    validateForm({ isAuth: true, values, errors });
 
-        return errors;
-    },
-    handleSubmit: (values, { setSubmitting, setStatus }) => {
-        return axios.post("/user/login", values).then(({data}) => {
-            setStatus(data.status);
-            localStorage.token = data.token;
-            setSubmitting(false);
-        })
-        .catch(() => {
-            setSubmitting(false);
-        });
-    },
-
-    displayName: "LoginForm"
+    return errors;
+  },
+  handleSubmit: (values, { setSubmitting, props }) => {
+    store.dispatch(userActions.fetchUserLogin(values)).then(({ status }) => {
+      if (status === "success") {
+        setTimeout(() => {
+          props.history.push("/");
+        }, 100);
+      }
+      setSubmitting(false);
+    });
+  },
+  displayName: "LoginForm"
 })(LoginForm);
 
 export default LoginFormContainer;

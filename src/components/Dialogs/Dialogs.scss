@@ -1,7 +1,6 @@
 @import "~styles/variables";
 
 .dialogs {
-
   &__search {
     padding: 2px 20px 20px 20px;
 
@@ -77,7 +76,6 @@
       }
       &-bottom {
         position: relative;
-
         p {
           opacity: 0.7;
           text-overflow: ellipsis;
@@ -104,8 +102,9 @@
           box-shadow: 0 0 0px 3px #fff;
         }
         .message__icon-readed {
-          position: absolute;
-          right: 0px;
+          bottom: 0;
+          left: auto;
+          right: 0;
         }
       }
     }

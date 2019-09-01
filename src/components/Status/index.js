@@ -5,13 +5,13 @@ import classNames from "classnames";
 import "./Status.scss";
 
 const Status = ({ online }) => (
-    <span className={classNames("status", { "status--online": online })}>
+  <span className={classNames("status", { "status--online": online })}>
     {online ? "онлайн" : "офлайн"}
   </span>
 );
 
 Status.propTypes = {
-    online: PropTypes.bool
+  online: PropTypes.bool
 };
 
 export default Status;

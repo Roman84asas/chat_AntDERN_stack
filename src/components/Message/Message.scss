@@ -8,12 +8,6 @@
     max-width: 440px;
     margin-bottom: 20px;
     position: relative;
-
-    &:hover {
-      #{$self}__icon-actions {
-        display: block;
-      }
-    }
   }
 
   &__avatar {
@@ -31,9 +25,9 @@
   }
 
   &__bubble {
-    background: $blue_message;
-    box-shadow: 0 5px 5px rgba(54, 116, 255, 0.196733);
-    border-radius: 12px 12px 12px 0;
+    background: $blue;
+    box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.196733);
+    border-radius: 12px 12px 12px 0px;
     padding: 15px;
     margin-bottom: 8px;
   }
@@ -62,22 +56,13 @@
     }
   }
 
-  &__icon {
-    &-readed {
-      position: absolute;
-      bottom: 22px;
-      left: -25px;
+  &__icon-readed {
+    position: absolute;
+    bottom: 22px;
+    left: -25px;
 
-      &--no {
-        left: -20px;
-      }
-    }
-    &-actions {
-      display: none;
-      transform: rotate(90deg);
-      position: absolute;
-      left: -31px;
-      top: -5px;
+    &--no {
+      left: -20px;
     }
   }
 
@@ -131,11 +116,6 @@
     display: flex;
     flex-direction: row-reverse;
 
-    .avatar {
-      margin-left: 13px;
-      margin-right: 0;
-    }
-
     #{$self}__content {
       margin-bottom: 15px;
       flex-direction: row-reverse;
@@ -155,8 +135,8 @@
     #{$self}__bubble {
       background: #ffffff;
       border: 1px solid #ececec;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.0220444);
-      border-radius: 12px 12px 0 12px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.0220444);
+      border-radius: 12px 12px 0px 12px;
       #{$self}__text {
         color: $black;
       }
@@ -166,7 +146,7 @@
   &--is-typing {
     #{$self}__bubble {
       background-color: $message-typing-blue;
-      box-shadow: 0 5px 5px rgba(54, 116, 255, 0.04);
+      box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.04);
       padding: 15px 18px;
       margin-bottom: 0;
     }
