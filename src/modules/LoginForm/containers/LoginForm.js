@@ -18,8 +18,10 @@ const LoginFormContainer = withFormik({
 
         return errors;
     },
-    handleSubmit: (values, { setSubmitting, props }) => {
+    handleSubmit: (values, { setSubmitting, setStatus }) => {
         return axios.post("/user/login", values).then(({data}) => {
+            setStatus(data.status);
+            localStorage.token = data.token;
             setSubmitting(false);
         })
         .catch(() => {
