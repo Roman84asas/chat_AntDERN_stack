@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b0dfa6c-5a0f-4c45-998d-c5b0cba8cf1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/validate.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -169,14 +169,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JSX Harmony" value="2" />
-          <entry key="JavaScript" value="8" />
+          <entry key="JSX Harmony" value="3" />
+          <entry key="JavaScript" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="90" />
+          <entry key="JavaScript" value="94" />
           <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
@@ -184,14 +184,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            <state relative-caret-position="323">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utils/helpers/validate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -214,8 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Block/index.js" />
         <option value="$PROJECT_DIR$/src/components/Block/Block.scss" />
         <option value="$PROJECT_DIR$/src/modules/RegisterForm/containers/RegisterForm.js" />
         <option value="$PROJECT_DIR$/src/pages/Auth/Auth.scss" />
@@ -265,6 +284,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/core/axios.js" />
         <option value="$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js" />
+        <option value="$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx" />
+        <option value="$PROJECT_DIR$/src/utils/helpers/validate.js" />
       </list>
     </option>
   </component>
@@ -346,6 +367,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="LoginForm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="LoginForm" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -458,21 +500,7 @@
       <workItem from="1567100893333" duration="414000" />
       <workItem from="1567189347799" duration="1396000" />
       <workItem from="1567255445855" duration="599000" />
-      <workItem from="1567344071987" duration="2216000" />
-    </task>
-    <task id="LOCAL-00026" summary="Add Home page and Message components">
-      <created>1566063390442</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1566063390442</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Add Formik">
-      <created>1566076595249</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1566076595249</updated>
+      <workItem from="1567344071987" duration="2654000" />
     </task>
     <task id="LOCAL-00028" summary="Add Formik">
       <created>1566079542283</created>
@@ -803,11 +831,25 @@
       <option name="project" value="LOCAL" />
       <updated>1567346010999</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="work with Redux and back">
+      <created>1567346306775</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1567346306775</updated>
+    </task>
+    <task id="LOCAL-00076" summary="work with Redux and back">
+      <created>1567346614702</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1567346614702</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269924000" />
+    <option name="totallyTimeSpent" value="270362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -885,13 +927,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="work with Redux and back" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/styles/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/helpers/convertCurrentTime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1186,9 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/helpers/validate.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Auth/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1222,11 +1254,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/containers/LoginForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/helpers/validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
         </state>
       </provider>
     </entry>
