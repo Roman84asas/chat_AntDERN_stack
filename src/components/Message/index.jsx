@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Emoji } from "emoji-mart";
+import { Popover, Button } from "antd";
 
 import { convertCurrentTime } from "../../utils/helpers";
 
@@ -96,7 +96,8 @@ const Message = ({
   isMe,
   isReaded,
   attachments,
-  isTyping
+  isTyping,
+  onRemoveMessage
 }) => {
   return (
     <div
@@ -109,17 +110,25 @@ const Message = ({
     >
       <div className="message__content">
         <IconReaded isMe={isMe} isReaded={isReaded} />
+        <Popover
+          content={
+            <div>
+              <Button onClick={onRemoveMessage}>Удалить сообщение</Button>
+            </div>
+          }
+          trigger="click"
+        >
+          <div className="message__icon-actions">
+            <Button type="link" shape="circle" icon="ellipsis" />
+          </div>
+        </Popover>
         <div className="message__avatar">
           <Avatar user={user} />
         </div>
         <div className="message__info">
           {(audio || text || isTyping) && (
             <div className="message__bubble">
-              {text && (
-                <p className="message__text">
-                  <Emoji emoji=":santa::skin-tone-3:" set="apple" size={16} />
-                </p>
-              )}
+              {text && <p className="message__text">{text}</p>}
               {isTyping && (
                 <div className="message__typing">
                   <span />
