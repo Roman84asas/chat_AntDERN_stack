@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Button, Input } from "antd";
 import { UploadField } from "@navjobs/upload";
@@ -28,14 +28,33 @@ const ChatInput = props => {
     setValue((value + ' ' + colons).trim());
   };
 
+  const handleOutsideClick = (el, e) => {
+      if (el && !el.contains(e.target)) {
+          setShowEmojiPicker(false);
+      }
+  };
+
+  useEffect(() => {
+    const  el = document.querySelector('chat-input__smile-btn');
+
+    document.addEventListener("click", handleOutsideClick.bind(this, el));
+
+    return() => {
+      document.removeEventListener("click", handleOutsideClick.bind(this, el));
+    };
+  }, []);
+
+
   return (
     <div className="chat-input">
       <div className="chat-input__smile-btn">
-        {emojiPickerVisible && (
-          <div className="chat-input__emoji-picker">
-            <Picker onSelect={(emojiTag) => setEmojiToInputValue(emojiTag)} set="apple" />
-          </div>
-        )}
+
+        <div className="chat-input__emoji-picker">
+            {emojiPickerVisible && (
+               <Picker  onSelect={(emojiTag) => setEmojiToInputValue(emojiTag)} set="apple" />
+            )}
+        </div>
+
         <Button
           onClick={toggleEmojiPicker}
           type="link"
@@ -43,6 +62,7 @@ const ChatInput = props => {
           icon="smile"
         />
       </div>
+
       <TextArea
         onChange={e => setValue(e.target.value)}
         onKeyUp={handleSendMessage}

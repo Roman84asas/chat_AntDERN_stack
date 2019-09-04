@@ -35,22 +35,31 @@ const DialogItem = ({
       <div className="dialogs__item-avatar">
         <Avatar user={lastMessage.user} />
       </div>
+
       <div className="dialogs__item-info">
+
         <div className="dialogs__item-info-top">
           <b>{lastMessage.user.fullname}</b>
           <span>{getMessageTime(lastMessage.created_at)}</span>
         </div>
+
         <div className="dialogs__item-info-bottom">
+
           <p>{lastMessage.text}</p>
+
           {isMe && <IconReaded isMe={true} isReaded={false} />}
+
           {lastMessage.undread > 0 && (
             <div className="dialogs__item-info-bottom-count">
               {lastMessage.undread > 9 ? "+9" : lastMessage.undread}
             </div>
           )}
         </div>
+
       </div>
+
     </div>
+
   </Link>
 );
 
