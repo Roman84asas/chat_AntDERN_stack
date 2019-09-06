@@ -9,7 +9,6 @@ import { Dialogs as BaseDialogs } from "../components";
 const Dialogs = ({
   fetchDialogs,
   currentDialogId,
-  setCurrentDialogId,
   items,
   userId
 }) => {
@@ -60,7 +59,6 @@ const Dialogs = ({
       items={filtred}
       onSearch={onChangeInput}
       inputValue={inputValue}
-      onSelectDialog={setCurrentDialogId}
       currentDialogId={currentDialogId}
     />
   );

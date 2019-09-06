@@ -21,7 +21,6 @@ const DialogItem = ({
   text,
   isMe,
   currentDialogId,
-  onSelect,
   lastMessage
 }) => (
   <Link to={`/dialog/${_id}`}>
@@ -30,7 +29,6 @@ const DialogItem = ({
         "dialogs__item--online": lastMessage.user.isOnline,
         "dialogs__item--selected": currentDialogId === _id
       })}
-      onClick={onSelect.bind(this, _id)}
     >
       <div className="dialogs__item-avatar">
         <Avatar user={lastMessage.user} />
