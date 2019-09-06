@@ -35,5 +35,5 @@ export default withFormik({
         setSubmitting(false);
       });
   },
-  displayName: "RegisterForm"
+  displayName: "RegisterForm",
 })(RegisterForm);

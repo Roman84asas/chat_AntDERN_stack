@@ -17,6 +17,7 @@ const RegisterForm = props => {
     isValid,
     isSubmitting
   } = props;
+
   return (
     <div>
       <div className="auth__top">
@@ -101,7 +102,9 @@ const RegisterForm = props => {
         )}
       </Block>
     </div>
+
   );
 };
 
 export default RegisterForm;
+
