@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2f7e5a7-0460-4690-974c-3c4d0ed06185" name="Default Changelist" comment="work with frontend">
-      <change afterPath="$PROJECT_DIR$/src/components/UploadFiles/index.jsx" afterDir="false" />
+    <list default="true" id="c2f7e5a7-0460-4690-974c-3c4d0ed06185" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/attachments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatInput/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatInput/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/user.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +34,7 @@
         <counts>
           <entry key="JSON" value="2" />
           <entry key="JSX Harmony" value="21" />
-          <entry key="JavaScript" value="84" />
+          <entry key="JavaScript" value="89" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="2" />
         </counts>
@@ -43,7 +43,7 @@
         <counts>
           <entry key="JSON" value="9" />
           <entry key="JSX Harmony" value="413" />
-          <entry key="JavaScript" value="1190" />
+          <entry key="JavaScript" value="1303" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="SCSS" value="3" />
         </counts>
@@ -69,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ChatInput/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -79,6 +79,38 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/attachments.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="71" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/messages.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -130,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/utils/helpers/useOutside.js" />
         <option value="$PROJECT_DIR$/src/utils/helpers/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Messages.js" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/user.js" />
         <option value="$PROJECT_DIR$/src/modules/RegisterForm/containers/RegisterForm.js" />
         <option value="$PROJECT_DIR$/src/modules/RegisterForm/components/RegisterForm.jsx" />
         <option value="$PROJECT_DIR$/src/components/FormField/index.jsx" />
@@ -141,6 +172,9 @@
         <option value="$PROJECT_DIR$/src/components/index.js" />
         <option value="$PROJECT_DIR$/src/components/UploadFiles/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/ChatInput/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/user.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/attachments.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
       </list>
     </option>
   </component>
@@ -205,6 +239,19 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="UploadFiles" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_AntDERN_stack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_AntDERN_stack" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -251,7 +298,7 @@
       <workItem from="1567504130210" duration="5802000" />
       <workItem from="1567517234974" duration="12575000" />
       <workItem from="1567589093312" duration="712000" />
-      <workItem from="1567770950025" duration="10076000" />
+      <workItem from="1567770950025" duration="10654000" />
     </task>
     <task id="LOCAL-00001" summary="work with frontend">
       <created>1567505480101</created>
@@ -302,11 +349,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567788018434</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="work with frontend">
+      <created>1567796293848</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567796293848</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35168000" />
+    <option name="totallyTimeSpent" value="35746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -346,23 +400,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="work with frontend" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/containers/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/LoginForm/components/LoginForm.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/dialogs.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/store.js">
@@ -507,13 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -666,6 +697,33 @@
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/dialogs.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/messages.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/attachments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="71" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
