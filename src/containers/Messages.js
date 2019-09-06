@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
+import { Empty } from "antd";
 
 import { messagesActions } from "../redux/actions";
 import socket from "../core/socket";
@@ -15,6 +16,10 @@ const Dialogs = ({
   isLoading,
   removeMessageById
 }) => {
+  if (!currentDialogId) {
+    return <Empty description="Отркройте диалог"/>;
+  }
+
   const messagesRef = useRef(null);
 
   const onNewMessage = data => {
