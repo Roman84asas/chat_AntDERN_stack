@@ -19,6 +19,11 @@
     position: absolute;
     bottom: 50px;
     z-index: 1;
+    .emoji-mart {
+      .emoji-mart-bar {
+        display: none;
+      }
+    }
   }
 
   &__actions {
