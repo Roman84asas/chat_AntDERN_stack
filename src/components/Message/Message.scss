@@ -51,6 +51,7 @@
   &__attachments {
     display: flex;
     margin-bottom: 5px;
+    order: 1;
     &-item {
       margin-right: 5px;
       cursor: pointer;
@@ -149,6 +150,8 @@
     }
 
     #{$self}__info {
+      display: flex;
+      align-items: center;
       text-align: right;
     }
 
