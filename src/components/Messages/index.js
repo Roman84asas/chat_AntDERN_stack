@@ -8,30 +8,34 @@ import { Message } from "../";
 import "./Messages.scss";
 
 const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
+
+
   return (
-    <div
-      ref={blockRef}
-      className={classNames("messages", { "messages--loading": isLoading })}
-    >
-      {isLoading ? (
-        <Spin size="large" tip="Загрузка сообщений..." />
-      ) : items && !isLoading ? (
-        items.length > 0 ? (
-          items.map(item => (
-            <Message
-              key={item._id}
-              {...item}
-              isMe={user._id === item.user._id}
-              onRemoveMessage={onRemoveMessage.bind(this, item._id)}
-            />
-          ))
-        ) : (
-          <Empty description="Диалог пуст" />
-        )
-      ) : (
-        <Empty description="Откройте диалог" />
-      )}
-    </div>
+      <div className="chat__dialog-messages" style={{ height: `calc(100% - 250}px)`}}>
+         <div
+          ref={blockRef}
+          className={classNames("messages", { "messages--loading": isLoading })}
+        >
+          {isLoading ? (
+            <Spin size="large" tip="Загрузка сообщений..." />
+          ) : items && !isLoading ? (
+            items.length > 0 ? (
+              items.map(item => (
+                <Message
+                  key={item._id}
+                  {...item}
+                  isMe={user._id === item.user._id}
+                  onRemoveMessage={onRemoveMessage.bind(this, item._id)}
+                />
+              ))
+            ) : (
+              <Empty description="Диалог пуст" />
+            )
+          ) : (
+            <Empty description="Откройте диалог" />
+          )}
+        </div>
+      </div>
   );
 };
 
