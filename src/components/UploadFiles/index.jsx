@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 import { Upload, Modal } from 'antd';
@@ -12,12 +12,20 @@ function getBase64(file) {
     });
 }
 
-const UploadFiles = () => {
+const UploadFiles = ({ attachments }) => {
     const [state, setState] = useState({
         previewVisible: false,
         previewImage: "",
-        fileList: []
+        fileList: attachments
     });
+
+    useEffect(() => {
+        setState({
+            ...state,
+            fileList: attachments
+        })
+    }, [attachments]);
+
 
     const handleCancel = () => setState({ ...state, previewVisible: false });
 
@@ -49,5 +57,9 @@ const UploadFiles = () => {
         </Modal>
     </div>
     );
+};
+
+UploadFiles.defaultProps = {
+    attachments: []
 };
 export default UploadFiles;
