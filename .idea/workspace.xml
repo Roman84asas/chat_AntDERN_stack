@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2f7e5a7-0460-4690-974c-3c4d0ed06185" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/api/files.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChatInput/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChatInput/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UploadFiles/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadFiles/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ChatInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ChatInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Status.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Status.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/api/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,7 +44,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="9" />
-          <entry key="JSX Harmony" value="461" />
+          <entry key="JSX Harmony" value="608" />
           <entry key="JavaScript" value="2201" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="SCSS" value="104" />
@@ -96,8 +92,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/UploadFiles/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="368">
+              <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -398,7 +397,7 @@
       <workItem from="1567835568895" duration="1652000" />
       <workItem from="1567847347162" duration="1785000" />
       <workItem from="1567851923814" duration="1242000" />
-      <workItem from="1567936975608" duration="10708000" />
+      <workItem from="1567936975608" duration="11581000" />
     </task>
     <task id="LOCAL-00001" summary="work with frontend">
       <created>1567505480101</created>
@@ -498,11 +497,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567949829854</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="work with frontend">
+      <created>1567954705034</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567954705034</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52977000" />
+    <option name="totallyTimeSpent" value="53850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -874,8 +880,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UploadFiles/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="368">
+          <caret line="35" column="4" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
