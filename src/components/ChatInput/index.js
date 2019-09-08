@@ -16,7 +16,10 @@ const ChatInput = props => {
           value,
           setValue,
           setEmojiToInputValue,
-          handleSendMessage } = props;
+          handleSendMessage,
+          sendMessage,
+          onSelectFiles,
+          attachments} = props;
 
 
   return (
@@ -48,7 +51,7 @@ const ChatInput = props => {
                 />
                 <div className="chat-input__actions">
                     <UploadField
-                        onFiles={files => console.log(files)}
+                        onFiles={onSelectFiles}
                         containerProps={{
                             className: "chat-input__actions-upload-btn"
                         }}
@@ -60,13 +63,13 @@ const ChatInput = props => {
                         <Button type="link" shape="circle" icon="camera" />
                     </UploadField>
                     {value ? (
-                        <Button type="link" shape="circle" icon="check-circle" />
+                        <Button onClick={sendMessage} type="link" shape="circle" icon="check-circle" />
                     ) : (
                         <Button type="link" shape="circle" icon="audio" />
                     )}
                 </div>
                 <div className="chat-input__attachments">
-                    <UploadFiles />
+                    <UploadFiles attachments={attachments} />
                 </div>
             </div>
         </div>

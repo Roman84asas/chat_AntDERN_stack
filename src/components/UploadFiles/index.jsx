@@ -17,12 +17,7 @@ class UploadFiles extends React.Component {
         previewVisible: false,
         previewImage: '',
         fileList: [
-            {
-                uid: '-1',
-                name: 'image.png',
-                status: 'done',
-                url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-            },
+
         ],
     };
 
@@ -43,6 +38,7 @@ class UploadFiles extends React.Component {
 
     render() {
         const { previewVisible, previewImage, fileList } = this.state;
+
 
         return (
             <div className="clearfix">

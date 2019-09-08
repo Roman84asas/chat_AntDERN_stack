@@ -1,13 +1,18 @@
 import React, {useEffect, useState} from "react";
 import { connect } from "react-redux";
+import { filesApi } from '../utils/api';
 
 import { ChatInput as ChatInputBase } from "../components";
 
 import { messagesActions } from "../redux/actions";
 
-const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
+const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
+    if (!currentDialogId) {
+        return null;
+    }
 
     const [value, setValue] = useState("");
+    const [attachments, setattAchments] = useState([]);
     const [emojiPickerVisible, setShowEmojiPicker] = useState(false);
 
     const toggleEmojiPicker = () => {
@@ -24,10 +29,21 @@ const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
         setValue((value + ' ' + colons).trim());
     };
 
+    const sendMessage = () => {
+        fetchSendMessage(value, currentDialogId);
+        setValue("");
+    };
+
     const handleSendMessage = e => {
         if (e.keyCode === 13) {
-            onSendMessage(value, currentDialogId);
-            setValue("");
+            sendMessage();
+        }
+    };
+
+    const onSelectFiles = files => {
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            filesApi.upload(file);
         }
     };
 
@@ -41,20 +57,17 @@ const ChatInput = ({ fetchSendMessage, currentDialogId, onSendMessage }) => {
         };
     }, []);
 
-    if (!currentDialogId) {
-        return null;
-    }
   return (
     <ChatInputBase
         value = {value}
         setValue = {setValue}
         emojiPickerVisible = {emojiPickerVisible}
         toggleEmojiPicker = {toggleEmojiPicker}
-        handleOutsideClick = {handleOutsideClick}
         setEmojiToInputValue = {setEmojiToInputValue}
         handleSendMessage = {handleSendMessage}
-        onSendMessage={fetchSendMessage}
-        currentDialogId={currentDialogId}
+        sendMessage = {sendMessage}
+        attachments = {attachments}
+        onSelectFiles = {onSelectFiles}
     />
   );
 };
