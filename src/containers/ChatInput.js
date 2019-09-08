@@ -31,8 +31,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     };
 
     const sendMessage = () => {
-        fetchSendMessage(value, currentDialogId);
+        fetchSendMessage(value, currentDialogId, attachments.map(file => file.uid));
         setValue("");
+        setAttachments([]);
     };
 
     const handleSendMessage = e => {
@@ -40,20 +41,6 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
             sendMessage();
         }
     };
-
-    // const onUpload = (uploaded, file) => {
-    //     return filesApi.upload(file.file).then(({ data }) => {
-    //         uploaded = [
-    //             ...uploaded,
-    //             {
-    //                 uid: data.file._id,
-    //                 name: file.name,
-    //                 status: 'uploading'
-    //             }
-    //         ];
-    //     });
-    //
-    // };
 
     const onSelectFiles = async files => {
         let uploaded = [];
