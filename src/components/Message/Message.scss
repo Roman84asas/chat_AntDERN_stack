@@ -160,6 +160,7 @@
       border: 1px solid #ececec;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.0220444);
       border-radius: 12px 12px 0px 12px;
+      order: 2;
       #{$self}__text {
         color: $black;
       }
