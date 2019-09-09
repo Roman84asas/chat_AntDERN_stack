@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-
 import { Upload, Modal } from 'antd';
 
 function getBase64(file) {
@@ -33,7 +31,6 @@ const UploadFiles = ({ attachments }) => {
         if (!file.url && !file.preview) {
             file.preview = await getBase64(file.originFileObj);
         }
-
         setState({ ...state,
                     previewImage: file.url || file.preview,
                     previewVisible: true,
