@@ -28,6 +28,33 @@
       }
     }
   }
+  
+  &__record-status {
+    display: flex;
+    align-items: center;
+    i {
+      display: inline-block;
+      position: relative;
+      height: 10px;
+      width: 10px;
+      background-color: #f56b6b;
+      border-radius: 30px;
+      margin-top: 5px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 10px;
+        width: 10px;
+        background-color: rgba(245, 107, 107, 0.5);
+        border-radius: 30px;
+        animation: wave-animation 1s ease-in-out infinite;
+        transition: transform 0.15s ease-in-out;
+        transform: scale(1);
+      }
+    }
+  }
 
   &__attachments {
     padding-left: 47px;
@@ -60,5 +87,17 @@
     &:focus {
       box-shadow: none;
     }
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
