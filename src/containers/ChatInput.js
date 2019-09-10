@@ -12,13 +12,50 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         return null;
     }
 
+    window.navigator.getUserMedia = (
+        window.navigator.getUserMedia ||
+        window.navigator.mozGetUserMedia ||
+        window.navigator.msGetUserMedia ||
+        window.navigator.webkitGetUserMedia);
+
     const [value, setValue] = useState("");
     const [isRecording, setIsRecording] = useState("");
     const [attachments, setAttachments] = useState([]);
+    const [mediaRecorder, setMediaRecorder] = useState(null);
     const [emojiPickerVisible, setShowEmojiPicker] = useState(false);
 
     const toggleEmojiPicker = () => {
         setShowEmojiPicker(!emojiPickerVisible);
+    };
+
+    const onRecord = () => {
+        if (navigator.getUserMedia) {
+            navigator.getUserMedia({ audio: true }, onRecording, onError);
+        }
+    };
+
+    const onRecording = (stream) => {
+        const recorder = new MediaRecorder(stream);
+        setMediaRecorder(recorder);
+
+        recorder.start();
+
+        recorder.onstart = () => {
+            setIsRecording(true);
+        };
+
+        recorder.onstop = () => {
+            setIsRecording(false);
+        };
+
+        recorder.ondataavailable = function(e) {
+            const audioURL = window.URL.createObjectURL([e.data]);
+            new Audio(audioURL).play();
+        }
+    };
+
+    const onError = (err) => {
+        console.log('The following error occured: ' + err);
     };
 
     const handleOutsideClick = (el, e) => {
@@ -43,8 +80,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         }
     };
 
-    const handleStartRecording = () => {
-        setIsRecording(true);
+    const onStopRecording = () => {
+        mediaRecorder.stop();
     };
 
     const onSelectFiles = async files => {
@@ -100,8 +137,9 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         sendMessage = {sendMessage}
         attachments = {attachments}
         onSelectFiles = {onSelectFiles}
-        handleStartRecording = {handleStartRecording}
         isRecording = {isRecording}
+        onStopRecording = {onStopRecording}
+        onRecord = {onRecord}
     />
   );
 };

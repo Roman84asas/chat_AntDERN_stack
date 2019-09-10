@@ -21,7 +21,8 @@ const ChatInput = props => {
           onSelectFiles,
           attachments,
           handleStartRecording,
-          isRecording} = props;
+          isRecording,
+          onStopRecording} = props;
 
 
   return (
@@ -44,8 +45,15 @@ const ChatInput = props => {
                 </div>
                 { isRecording ? (
                     isRecording && <div className="chat-input__record-status">
-                        <i></i>
+                        <i className="chat-input__record-status-bubble" ></i>
                         Recording...
+                        <Button
+                            onClick={onStopRecording}
+                            type="link"
+                            shape="circle"
+                            icon="close-circle"
+                            className="stop-recording"
+                        />
                     </div>
                     ) :
                     <TextArea

@@ -34,14 +34,25 @@
     align-items: center;
     flex: 1;
     justify-content: center;
-    i {
+
+    .stop-recording {
+      i {
+        svg {
+          position: relative;
+          top: -1px;
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+    &-bubble {
       display: inline-block;
       position: relative;
       height: 10px;
       width: 10px;
       background-color: #f56b6b;
       border-radius: 30px;
-      margin-top: 5px;
+      margin-top: 8px;
       &::before {
         content: "";
         position: absolute;
