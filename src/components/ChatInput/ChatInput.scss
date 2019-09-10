@@ -32,6 +32,8 @@
   &__record-status {
     display: flex;
     align-items: center;
+    flex: 1;
+    justify-content: center;
     i {
       display: inline-block;
       position: relative;

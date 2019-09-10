@@ -42,15 +42,21 @@ const ChatInput = props => {
                         icon="smile"
                     />
                 </div>
-
-                <TextArea
-                    onChange={e => setValue(e.target.value)}
-                    onKeyUp={handleSendMessage}
-                    size="large"
-                    placeholder="Введите текст сообщения…"
-                    value={value}
-                    autosize={{ minRows: 1, maxRows: 6 }}
-                />
+                { isRecording ? (
+                    isRecording && <div className="chat-input__record-status">
+                        <i></i>
+                        Recording...
+                    </div>
+                    ) :
+                    <TextArea
+                        onChange={e => setValue(e.target.value)}
+                        onKeyUp={handleSendMessage}
+                        size="large"
+                        placeholder="Введите текст сообщения…"
+                        value={value}
+                        autosize={{ minRows: 1, maxRows: 6 }}
+                    />
+                }
                 <div className="chat-input__actions">
                     <UploadField
                         onFiles={onSelectFiles}
@@ -71,12 +77,6 @@ const ChatInput = props => {
                             <Button onClick={handleStartRecording} type="link" shape="circle" icon="audio" />
                         </div>
                     )}
-                    {
-                        isRecording && <div className="chat-input__record-status">
-                            <i></i>
-                            Recording...
-                        </div>
-                    }
                 </div>
                 <div className="chat-input__attachments">
                     <UploadFiles attachments={attachments} />
