@@ -19,7 +19,9 @@ const ChatInput = props => {
           handleSendMessage,
           sendMessage,
           onSelectFiles,
-          attachments} = props;
+          attachments,
+          handleStartRecording,
+          isRecording} = props;
 
 
   return (
@@ -62,11 +64,19 @@ const ChatInput = props => {
                     >
                         <Button type="link" shape="circle" icon="camera" />
                     </UploadField>
-                    {value ? (
+                    {isRecording || value ? (
                         <Button onClick={sendMessage} type="link" shape="circle" icon="check-circle" />
                     ) : (
-                        <Button type="link" shape="circle" icon="audio" />
+                        <div className="chat-input__record-btn">
+                            <Button onClick={handleStartRecording} type="link" shape="circle" icon="audio" />
+                        </div>
                     )}
+                    {
+                        isRecording && <div className="chat-input__record-status">
+                            <i></i>
+                            Recording...
+                        </div>
+                    }
                 </div>
                 <div className="chat-input__attachments">
                     <UploadFiles attachments={attachments} />

@@ -13,6 +13,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
     }
 
     const [value, setValue] = useState("");
+    const [isRecording, setIsRecording] = useState("");
     const [attachments, setAttachments] = useState([]);
     const [emojiPickerVisible, setShowEmojiPicker] = useState(false);
 
@@ -40,6 +41,10 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         if (e.keyCode === 13) {
             sendMessage();
         }
+    };
+
+    const handleStartRecording = () => {
+        setIsRecording(true);
     };
 
     const onSelectFiles = async files => {
@@ -95,6 +100,8 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         sendMessage = {sendMessage}
         attachments = {attachments}
         onSelectFiles = {onSelectFiles}
+        handleStartRecording = {handleStartRecording}
+        isRecording = {isRecording}
     />
   );
 };
