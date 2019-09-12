@@ -1,4 +1,5 @@
 import React from "react";
+import { Modal, Button } from 'antd';
 import PropTypes from "prop-types";
 import { Empty, Spin } from "antd";
 import classNames from "classnames";
@@ -7,9 +8,15 @@ import { Message } from "../";
 
 import "./Messages.scss";
 
-const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
-
-
+const Messages = ({
+                      onRemoveMessage,
+                      blockRef,
+                      isLoading,
+                      items,
+                      user,
+                      previewImage,
+                      setPreviewImage
+}) => {
   return (
       <div className="chat__dialog-messages" style={{ height: `calc(100% - 245}px)`}}>
          <div
@@ -26,6 +33,7 @@ const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
                   {...item}
                   isMe={user._id === item.user._id}
                   onRemoveMessage={onRemoveMessage.bind(this, item._id)}
+                  setPreviewImage = {setPreviewImage}
                 />
               ))
             ) : (
@@ -34,6 +42,13 @@ const Messages = ({ onRemoveMessage, blockRef, isLoading, items, user }) => {
           ) : (
             <Empty description="Откройте диалог" />
           )}
+             <Modal
+                 visible={!!previewImage}
+                 onCancel={() => setPreviewImage(null)}
+                 footer={null}
+             >
+                 <img src={previewImage} alt="Preview"/>
+             </Modal>
         </div>
       </div>
   );

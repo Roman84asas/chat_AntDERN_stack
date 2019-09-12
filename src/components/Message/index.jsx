@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Popover, Button } from "antd";
+import { Popover, Button, Icon } from "antd";
 import { Emoji } from 'emoji-mart';
 import reactStringReplace from 'react-string-replace';
 
@@ -101,7 +101,8 @@ const Message = ({
   readed,
   attachments,
   isTyping,
-  onRemoveMessage
+  onRemoveMessage,
+  setPreviewImage
 }) => {
   return (
     <div
@@ -144,7 +145,7 @@ const Message = ({
                   <span />
                 </div>
               )}
-              {audio && <MessageAudio audioSrc={audio} />}
+              {false && <MessageAudio audioSrc={audio} />}
             </div>
           )}
 
@@ -152,6 +153,13 @@ const Message = ({
             <div className="message__attachments">
               {attachments.map((item, index) => (
                 <div key={index} className="message__attachments-item">
+                    <div className="message__attachments-item-overlay">
+                        <Icon
+                            type="eye"
+                            style={{ color: "white", fontSize: 18 }}
+                        />
+                    </div>
+
                   <img src={item.url} alt={item.filename} />
                 </div>
               ))}
