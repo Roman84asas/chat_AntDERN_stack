@@ -47,7 +47,7 @@ const Messages = ({
                  onCancel={() => setPreviewImage(null)}
                  footer={null}
              >
-                 <img src={previewImage} alt="Preview"/>
+                 <img src={previewImage} style={{ width: '100%' }} alt="Preview"/>
              </Modal>
         </div>
       </div>
