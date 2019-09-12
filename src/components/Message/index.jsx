@@ -152,7 +152,7 @@ const Message = ({
           {attachments && (
             <div className="message__attachments">
               {attachments.map((item, index) => (
-                <div key={index} className="message__attachments-item">
+                <div onClick={() => setPreviewImage(item.url)} key={index} className="message__attachments-item">
                     <div className="message__attachments-item-overlay">
                         <Icon
                             type="eye"
