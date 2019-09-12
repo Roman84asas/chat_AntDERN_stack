@@ -14,26 +14,7 @@ import pauseSvg from "../../assets/img/pause.svg";
 import { Time, IconReaded, Avatar } from "../";
 
 import "./Message.scss";
-import attachments from "../../redux/reducers/attachments";
 
-
-const renderAttachments = (attachments) => {
-  if (attachments) {
-    if (attachments.length > 1) {
-        return (
-            <div className="message__attachments">
-                {attachments.map((item, index) => (
-                    <div key={index} className="message__attachments-item">
-                        <img src={item.url} alt={item.filename} />
-                    </div>
-                ))}
-            </div>
-        );
-    }
-  } else {
-    return null;
-  }
-};
 
 const MessageAudio = ({ audioSrc }) => {
   const audioElem = useRef(null);
@@ -166,7 +147,15 @@ const Message = ({
             </div>
           )}
 
-          {renderAttachments(attachments)}
+          {attachments && (
+            <div className="message__attachments">
+              {attachments.map((item, index) => (
+                <div key={index} className="message__attachments-item">
+                  <img src={item.url} alt={item.filename} />
+                </div>
+              ))}
+            </div>
+          )}
 
           {date && (
             <span className="message__date">
