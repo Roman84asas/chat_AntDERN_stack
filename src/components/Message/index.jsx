@@ -90,6 +90,7 @@ const MessageAudio = ({ audioSrc }) => {
   );
 };
 
+
 const Message = ({
   avatar,
   user,
@@ -129,7 +130,7 @@ const Message = ({
           <Avatar user={user} />
         </div>
         <div className="message__info">
-          {(audio || text || isTyping) && (
+          {text && (
             <div className="message__bubble">
               {text && <p className="message__text">
                   {reactStringReplace(text, /:(\d+.+?):/g, (match, i) => (
