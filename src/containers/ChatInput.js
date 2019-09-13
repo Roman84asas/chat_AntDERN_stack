@@ -49,8 +49,10 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         };
 
         recorder.ondataavailable = function(e) {
-            const audioURL = window.URL.createObjectURL([e.data]);
-            new Audio(audioURL).play();
+            const file = new File([e.data], "audio.ogg");
+            filesApi.upload(file).then(({ data }) => {
+            });
+            }
         }
     };
 

@@ -1,10 +1,10 @@
 import { axios } from "../../core";
 
 export default {
-    upload: (files) => {
+    upload: (file) => {
         const formData = new FormData();
 
-        formData.append("image", files);
+        formData.append("file", file);
         return axios.post('/files', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
