@@ -116,18 +116,28 @@
     audio {
       display: none;
     }
+
     #{$self}__bubble {
       width: 280px;
       position: relative;
       overflow: hidden;
     }
+
     #{$self}__audio {
+      padding: 15px;
+      background-color: #3674ff;
+      border-radius: 6px 6px 0 6px;
+      width: 250px;
+      overflow: hidden;
+      position: relative;
+
       &-info {
         display: flex;
         align-items: center;
         justify-content: space-between;
         position: relative;
       }
+
       &-btn {
         button {
           cursor: pointer;
@@ -138,6 +148,8 @@
           background: #0f3997;
           img {
             height: 13px;
+            position: relative;
+            left: 1px;
           }
         }
       }

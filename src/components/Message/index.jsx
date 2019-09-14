@@ -5,7 +5,7 @@ import { Popover, Button, Icon } from "antd";
 import { Emoji } from 'emoji-mart';
 import reactStringReplace from 'react-string-replace';
 
-import { convertCurrentTime } from "../../utils/helpers";
+import { convertCurrentTime, isAudio } from "../../utils/helpers";
 
 import waveSvg from "../../assets/img/wave.svg";
 import playSvg from "../../assets/img/play.svg";
@@ -96,7 +96,6 @@ const Message = ({
   user,
   text,
   date,
-  audio,
   isMe,
   readed,
   attachments,
@@ -104,13 +103,37 @@ const Message = ({
   onRemoveMessage,
   setPreviewImage
 }) => {
+    const renderAttachment = item => {
+        if (item.ext !== "webm") {
+            return (
+                <div
+                    key={item._id}
+                    onClick={() => setPreviewImage(item.url)}
+                    className="message__attachments-item"
+                >
+                    <div className="message__attachments-item-overlay">
+                        <Icon type="eye" style={{ color: "white", fontSize: 18 }} />
+                    </div>
+
+                    <img src={item.url} alt={item.filename} />
+                </div>
+            );
+        } else {
+            return <MessageAudio key={item._id} audioSrc={item.url} />;
+        }
+    };
+
   return (
     <div
       className={classNames("message", {
         "message--isme": isMe,
         "message--is-typing": isTyping,
-        "message--is-audio": audio,
-        "message--image": attachments && attachments.length === 1 && !text
+          "message--is-audio": isAudio(attachments),
+          "message--image":
+              !isAudio(attachments) &&
+              attachments &&
+              attachments.length === 1 &&
+              !text
       })}
     >
       <div className="message__content">
@@ -131,13 +154,15 @@ const Message = ({
           <Avatar user={user} />
         </div>
         <div className="message__info">
-          {text && (
+          {(text || isTyping) && (
             <div className="message__bubble">
-              {text && <p className="message__text">
-                  {reactStringReplace(text, /:(\d+.+?):/g, (match, i) => (
-                    <Emoji emoji={match} set='apple' size={16} />
-                  ))}
-              </p>}
+                {text && (
+                    <p className="message__text">
+                        {reactStringReplace(text, /:(.+?):/g, (match, i) => (
+                            <Emoji emoji={match} set="apple" size={16} />
+                        ))}
+                    </p>
+                )}
               {isTyping && (
                 <div className="message__typing">
                   <span />
@@ -145,7 +170,7 @@ const Message = ({
                   <span />
                 </div>
               )}
-              {false && <MessageAudio audioSrc={audio} />}
+              {false && <MessageAudio audioSrc={null} />}
             </div>
           )}
 
@@ -163,6 +188,7 @@ const Message = ({
                   <img src={item.url} alt={item.filename} />
                 </div>
               ))}
+                {attachments.map((item, index) => renderAttachment(item))}
             </div>
           )}
 
