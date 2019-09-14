@@ -1,7 +1,7 @@
 import { axios } from "../../core";
 
 export default {
-    upload: (file) => {
+    upload: file => {
         const formData = new FormData();
 
         formData.append("file", file);
