@@ -26,6 +26,7 @@ const Dialogs = ({
         <DialogItem
           key={item._id}
           isMe={item.author._id === userId}
+          userId={userId}
           currentDialogId={currentDialogId}
           {...item}
         />

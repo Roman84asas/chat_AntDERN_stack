@@ -28,14 +28,16 @@
       }
     }
   }
-  
+
   &__record-status {
     display: flex;
     align-items: center;
     flex: 1;
     justify-content: center;
+    color: #f56b6b;
 
     .stop-recording {
+      margin-left: 5px;
       i {
         svg {
           position: relative;
@@ -45,6 +47,7 @@
         }
       }
     }
+
     &-bubble {
       display: inline-block;
       position: relative;
@@ -52,7 +55,7 @@
       width: 10px;
       background-color: #f56b6b;
       border-radius: 30px;
-      margin-top: 8px;
+      margin-right: 8px;
       &::before {
         content: "";
         position: absolute;
@@ -70,8 +73,8 @@
   }
 
   &__attachments {
-    padding-left: 47px;
     padding-top: 10px;
+    padding-left: 47px;
   }
 
   &__actions {
