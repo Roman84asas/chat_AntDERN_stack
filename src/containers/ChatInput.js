@@ -1,28 +1,39 @@
 import React, {useEffect, useState} from "react";
 import { connect } from "react-redux";
 import { filesApi } from '../utils/api';
+import socket from "../core/socket";
 
 import { ChatInput as ChatInputBase } from "../components";
 
-import { messagesActions } from "../redux/actions";
-import attachments from "../redux/reducers/attachments";
+import { messagesActions, attachmentsActions } from "../redux/actions";
 
-const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
+import { messagesActions, attachmentsActions } from "redux/actions";
+
+const ChatInput = props => {
+    const {
+        dialogs: { currentDialogId },
+        attachments,
+        fetchSendMessage,
+        setAttachments,
+        removeAttachment,
+        user
+    } = props;
+
     if (!currentDialogId) {
         return null;
     }
 
-    window.navigator.getUserMedia = (
+    window.navigator.getUserMedia =
         window.navigator.getUserMedia ||
         window.navigator.mozGetUserMedia ||
         window.navigator.msGetUserMedia ||
-        window.navigator.webkitGetUserMedia);
+        window.navigator.webkitGetUserMedia;
 
     const [value, setValue] = useState("");
     const [isRecording, setIsRecording] = useState("");
-    const [attachments, setAttachments] = useState([]);
     const [mediaRecorder, setMediaRecorder] = useState(null);
     const [emojiPickerVisible, setShowEmojiPicker] = useState(false);
+    const [isLoading, setLoading] = useState(false);
 
     const toggleEmojiPicker = () => {
         setShowEmojiPicker(!emojiPickerVisible);
@@ -34,7 +45,7 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         }
     };
 
-    const onRecording = (stream) => {
+    const onRecording = stream => {
         const recorder = new MediaRecorder(stream);
         setMediaRecorder(recorder);
 
@@ -48,16 +59,19 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
             setIsRecording(false);
         };
 
-        recorder.ondataavailable = function(e) {
-            const file = new File([e.data], "audio.ogg", {type: "audio/ogg"});
+        recorder.ondataavailable = e => {
+            const file = new File([e.data], "audio.webm");
+            setLoading(true);
             filesApi.upload(file).then(({ data }) => {
+                sendAudio(data.file._id).then(() => {
+                    setLoading(false);
+                });
             });
-            }
-        }
+        };
     };
 
-    const onError = (err) => {
-        console.log('The following error occured: ' + err);
+    const onError = err => {
+        console.log("The following error occured: " + err);
     };
 
     const handleOutsideClick = (el, e) => {
@@ -66,87 +80,108 @@ const ChatInput = ({ fetchSendMessage, currentDialogId }) => {
         }
     };
 
-    const setEmojiToInputValue = ({colons}) => {
-        setValue((value + ' ' + colons).trim());
+    const addEmoji = ({ colons }) => {
+        setValue((value + " " + colons).trim());
+    };
+
+    const sendAudio = audioId => {
+        return fetchSendMessage({
+            text: null,
+            dialogId: currentDialogId,
+            attachments: [audioId]
+        });
     };
 
     const sendMessage = () => {
-        fetchSendMessage(value, currentDialogId, attachments.map(file => file.uid));
-        setValue("");
-        setAttachments([]);
+        if (isRecording) {
+            mediaRecorder.stop();
+        } else if (value) {
+            fetchSendMessage({
+                text: value,
+                dialogId: currentDialogId,
+                attachments: attachments.map(file => file.uid)
+            });
+            setValue("");
+            setAttachments([]);
+        }
     };
 
     const handleSendMessage = e => {
+        socket.emit("DIALOGS:TYPING", { dialogId: currentDialogId, user });
         if (e.keyCode === 13) {
             sendMessage();
         }
     };
 
-    const onStopRecording = () => {
-        mediaRecorder.stop();
+    const onHideRecording = () => {
+        setIsRecording(false);
     };
 
     const onSelectFiles = async files => {
         let uploaded = [];
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
-            const uid = Math.round( Math.random() * 1000);
+            const uid = Math.round(Math.random() * 1000);
             uploaded = [
                 ...uploaded,
                 {
                     uid,
-                    file,
                     name: file.name,
-                    status: 'uploading'
+                    status: "uploading"
                 }
             ];
             setAttachments(uploaded);
+            // eslint-disable-next-line no-loop-func
             await filesApi.upload(file).then(({ data }) => {
-                uploaded =uploaded.map(item => {
+                uploaded = uploaded.map(item => {
                     if (item.uid === uid) {
-                        item = {
+                        return {
+                            status: "done",
                             uid: data.file._id,
                             name: data.file.filename,
-                            status: 'done',
                             url: data.file.url
                         };
                     }
-                    return item
-                })}
-            );
+                    return item;
+                });
+            });
         }
         setAttachments(uploaded);
     };
 
     useEffect(() => {
-        const  el = document.querySelector('chat-input__smile-btn');
-
+        const el = document.querySelector(".chat-input__smile-btn");
         document.addEventListener("click", handleOutsideClick.bind(this, el));
-
-        return() => {
+        return () => {
             document.removeEventListener("click", handleOutsideClick.bind(this, el));
         };
     }, []);
 
   return (
     <ChatInputBase
-        value = {value}
-        setValue = {setValue}
-        emojiPickerVisible = {emojiPickerVisible}
-        toggleEmojiPicker = {toggleEmojiPicker}
-        setEmojiToInputValue = {setEmojiToInputValue}
-        handleSendMessage = {handleSendMessage}
-        sendMessage = {sendMessage}
-        attachments = {attachments}
-        onSelectFiles = {onSelectFiles}
-        isRecording = {isRecording}
-        onStopRecording = {onStopRecording}
-        onRecord = {onRecord}
+        value={value}
+        setValue={setValue}
+        emojiPickerVisible={emojiPickerVisible}
+        toggleEmojiPicker={toggleEmojiPicker}
+        addEmoji={addEmoji}
+        handleSendMessage={handleSendMessage}
+        sendMessage={sendMessage}
+        onSelectFiles={onSelectFiles}
+        attachments={attachments}
+        isRecording={isRecording}
+        onRecord={onRecord}
+        onHideRecording={onHideRecording}
+        isLoading={isLoading}
+        removeAttachment={removeAttachment}
     />
   );
 };
 
 export default connect(
-  ({ dialogs }) => dialogs,
-  messagesActions
+    ({ dialogs, attachments, user }) => ({
+        dialogs,
+        attachments: attachments.items,
+        user: user.data
+    }),
+    { ...messagesActions, ...attachmentsActions }
 )(ChatInput);
